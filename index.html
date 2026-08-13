@@ -1,217 +1,682 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Bazil Hassan — Senior iOS Engineer specializing in Swift, UIKit, SwiftUI, AVFoundation, WebRTC, LiveKit, camera and real-time media systems.">
-  <meta name="theme-color" content="#0b0c0e">
-  <meta property="og:title" content="Bazil Hassan — Senior iOS Engineer">
-  <meta property="og:description" content="Senior iOS Engineer building complex camera, video and real-time mobile products.">
-  <meta property="og:type" content="website">
-  <title>Bazil Hassan — Senior iOS Engineer</title>
-  <style>
-    :root{
-      --bg:#090a0c;--panel:#101216;--panel2:#14171c;--text:#f5f7fa;--muted:#929aa6;
-      --line:#242830;--accent:#b7a0ff;--accent2:#76e4ef;--max:1160px;--radius:18px;
-    }
-    *{box-sizing:border-box}html{scroll-behavior:smooth}
-    body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Inter",Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
-    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E")}
-    a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
-    .nav{position:fixed;z-index:20;top:0;left:0;right:0;border-bottom:1px solid rgba(255,255,255,.06);background:rgba(9,10,12,.76);backdrop-filter:blur(18px)}
-    .nav-in{height:68px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:700;letter-spacing:-.04em}.brand i{color:var(--accent);font-style:normal}
-    .links{display:flex;gap:25px;color:#aeb5c0;font-size:13px}.links a:hover{color:#fff}.nav-cta{font-size:13px;font-weight:600;padding:9px 13px;border:1px solid var(--line);border-radius:10px}
-    .hero{padding:155px 0 105px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:650px;height:650px;right:-250px;top:30px;border-radius:50%;background:radial-gradient(circle,rgba(130,100,255,.15),transparent 65%);filter:blur(10px);pointer-events:none}
-    .availability{display:inline-flex;align-items:center;gap:8px;border:1px solid #2a3433;background:#101614;padding:7px 11px;border-radius:999px;color:#c7d3ce;font-size:12px;margin-bottom:25px}
-    .pulse{width:7px;height:7px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 5px rgba(74,222,128,.08)}
-    h1{font-size:clamp(50px,8vw,92px);line-height:.95;letter-spacing:-.065em;max-width:980px;margin:0 0 27px;font-weight:750}
-    .accent{background:linear-gradient(100deg,#fff 20%,#c5b8ff 58%,#86e9ef);-webkit-background-clip:text;color:transparent}
-    .lead{max-width:760px;color:#a5adb8;font-size:19px;line-height:1.65;margin:0}
-    .hero-row{display:flex;align-items:center;gap:14px;margin-top:33px;flex-wrap:wrap}.button{display:inline-flex;align-items:center;gap:9px;padding:12px 16px;border:1px solid var(--line);border-radius:11px;font-size:13px;font-weight:650;transition:.2s}.button:hover{transform:translateY(-2px);border-color:#424853}
-    .button.primary{background:#f5f5f5;color:#0b0c0e;border-color:#f5f5f5}.small-note{color:#68717e;font-size:12px}
-    .section{padding:95px 0;border-top:1px solid rgba(255,255,255,.07)}.kicker{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#9d8bf0;font-weight:700;margin-bottom:13px}
-    h2{font-size:clamp(32px,4vw,52px);line-height:1.04;letter-spacing:-.05em;margin:0 0 18px}.intro{max-width:710px;color:var(--muted);font-size:16px}
-    .proof{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:38px}.proof-card{padding:21px;border:1px solid var(--line);border-radius:15px;background:linear-gradient(145deg,#101216,#0c0d10)}.proof-card strong{display:block;font-size:26px;letter-spacing:-.04em}.proof-card span{font-size:12px;color:#7f8793}
-    .work-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:42px}
-    .project{border:1px solid var(--line);border-radius:var(--radius);background:#0e1014;overflow:hidden;transition:.25s}.project:hover{transform:translateY(-4px);border-color:#3a404a}
-    .visual{height:255px;position:relative;overflow:hidden;background:linear-gradient(145deg,#151823,#0c0e12);display:flex;align-items:center;justify-content:center}
-    .visual:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 25% 25%,rgba(174,151,255,.22),transparent 36%),radial-gradient(circle at 75% 80%,rgba(90,220,230,.14),transparent 38%)}
-    .phone{width:142px;height:236px;border:5px solid #20242b;border-radius:25px;background:#070809;box-shadow:0 25px 50px rgba(0,0,0,.55);position:relative;overflow:hidden;z-index:1}
-    .phone:before{content:"";position:absolute;left:50%;top:7px;transform:translateX(-50%);width:48px;height:12px;background:#16191e;border-radius:10px}
-    .camera-ui{position:absolute;inset:0;background:linear-gradient(160deg,#233344,#11151a 48%,#372844);}.camera-ui:after{content:"SPATIAL";position:absolute;left:10px;bottom:13px;color:#fff;font-size:8px;letter-spacing:.12em}
-    .stream-ui{position:absolute;inset:0;background:linear-gradient(145deg,#17181d,#3b1e32 45%,#101216)}.stream-ui:after{content:"LIVE";position:absolute;top:27px;left:10px;color:#ff8c9b;font-weight:800;font-size:9px}
-    .label{position:absolute;left:18px;top:18px;font-size:11px;color:#aeb5c1;z-index:2;border:1px solid rgba(255,255,255,.12);padding:5px 8px;border-radius:8px;background:rgba(0,0,0,.2)}
-    .project-body{padding:24px}.project-meta{display:flex;justify-content:space-between;gap:10px;color:#7e8793;font-size:11px;text-transform:uppercase;letter-spacing:.12em}.project h3{font-size:25px;letter-spacing:-.04em;margin:13px 0 9px}.project p{color:#9099a5;font-size:14px;margin:0 0 18px}.tags{display:flex;gap:6px;flex-wrap:wrap}.tag{font-size:11px;padding:5px 8px;border:1px solid var(--line);border-radius:7px;color:#bac1cb}
-    .case{margin-top:18px;border:1px solid var(--line);border-radius:var(--radius);padding:30px;background:linear-gradient(145deg,#111318,#0c0e11);display:grid;grid-template-columns:.75fr 1.25fr;gap:55px}
-    .case-title{font-size:29px;letter-spacing:-.045em;margin:0 0 10px}.case-sub{color:#858e9b;font-size:13px}.case-item{padding:17px 0;border-top:1px solid var(--line)}.case-item h4{font-size:13px;margin:0 0 5px}.case-item p{font-size:13px;color:#858e9b;margin:0}
-    .stack{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:35px}.stack-item{border:1px solid var(--line);background:#0f1115;border-radius:12px;padding:16px;font-size:13px;color:#c7cdd6}.stack-item b{display:block;color:#fff;margin-bottom:4px;font-size:14px}
-    .experience{display:grid;grid-template-columns:.65fr 1.35fr;gap:70px}.timeline{border-left:1px solid var(--line);padding-left:26px}.role{position:relative;margin-bottom:42px}.role:before{content:"";position:absolute;left:-32px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--accent)}.role h3{margin:0;font-size:20px;letter-spacing:-.03em}.role .meta{color:#9889d7;font-size:12px;margin:5px 0 10px}.role p{color:#858e9b;font-size:14px;margin:0}
-    .contact{padding:105px 0 125px;text-align:center}.contact h2{max-width:780px;margin:0 auto 18px}.contact .intro{margin:auto}.contact .hero-row{justify-content:center}
-    footer{border-top:1px solid var(--line);padding:24px 0;color:#69727e;font-size:12px}.foot{display:flex;justify-content:space-between;gap:20px}
-    .reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:none}
-    @media(max-width:800px){.links{display:none}.wrap{width:min(var(--max),calc(100% - 28px))}.hero{padding-top:125px}.hero-row{align-items:flex-start}.proof,.work-grid,.case,.experience{grid-template-columns:1fr}.stack{grid-template-columns:1fr 1fr}.case{gap:25px}.visual{height:235px}.nav-cta{display:none}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.project,.button{transition:none}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bazil Hassan — Senior iOS Engineer | Camera, Real-Time Video, Spatial Media</title>
+<meta name="description" content="Senior iOS engineer with 6+ years building production camera, live streaming and spatial media apps. Swift, SwiftUI, AVFoundation, WebRTC, LiveKit. Available for remote roles and contract work.">
+<meta name="author" content="Bazil Hassan">
+<meta name="theme-color" content="#F7F7F4">
+<link rel="canonical" href="https://bazilhassan.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bazilhassan.com/">
+<meta property="og:title" content="Bazil Hassan — Senior iOS Engineer">
+<meta property="og:description" content="I build iOS apps where the camera and the network are the hard part. Swift, AVFoundation, WebRTC, LiveKit, spatial video.">
+<meta property="og:image" content="https://bazilhassan.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bazil Hassan — Senior iOS Engineer">
+<meta name="twitter:description" content="I build iOS apps where the camera and the network are the hard part.">
+<meta name="twitter:image" content="https://bazilhassan.com/og-image.png">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2317191D'/%3E%3Cpath d='M8 8h5M8 8v5M24 8h-5M24 8v5M8 24h5M8 24v-5M24 24h-5M24 24v-5' stroke='%23E0A422' stroke-width='2.2' fill='none' stroke-linecap='square'/%3E%3Ccircle cx='16' cy='16' r='3.4' fill='%23E0A422'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Bazil Hassan",
+  "jobTitle": "Senior iOS Engineer",
+  "url": "https://bazilhassan.com/",
+  "email": "mailto:bazil@bazilhassan.com",
+  "description": "Senior iOS engineer specialising in camera systems, real-time video and spatial media.",
+  "knowsAbout": ["iOS Development","Swift","SwiftUI","UIKit","AVFoundation","WebRTC","LiveKit","Spatial Video","Clean Architecture","React Native"],
+  "sameAs": [
+    "https://www.linkedin.com/in/bazil-hassan/",
+    "https://github.com/bazilhassan"
+  ]
+}
+</script>
+
+<style>
+:root{
+  --paper:#F7F7F4;
+  --card:#FFFFFF;
+  --ink:#17191D;
+  --muted:#6B7178;
+  --line:#E2E2DC;
+  --accent:#E0A422;
+  --accent-deep:#966A08;
+  --shadow:0 1px 2px rgba(23,25,29,.04), 0 8px 24px rgba(23,25,29,.05);
+  --maxw:1080px;
+  --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --display:'Archivo',var(--sans);
+  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--sans);font-size:16.5px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.band{padding:92px 0;border-top:1px solid var(--line)}
+.band--plain{border-top:none}
+
+/* ---------- type ---------- */
+h1,h2,h3,h4{font-family:var(--display);font-weight:600;letter-spacing:-.021em;margin:0;line-height:1.14}
+h1{font-size:clamp(2.3rem,5.6vw,3.85rem);letter-spacing:-.032em}
+h2{font-size:clamp(1.65rem,3.4vw,2.35rem);letter-spacing:-.026em}
+h3{font-size:1.2rem;letter-spacing:-.016em}
+p{margin:0 0 1.05em}
+.lede{font-size:clamp(1.02rem,1.9vw,1.18rem);color:#3C4149;max-width:60ch}
+.muted{color:var(--muted)}
+
+.eyebrow{
+  font-family:var(--mono);font-size:.685rem;font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--accent-deep);
+  display:flex;align-items:center;gap:11px;margin:0 0 22px;
+}
+.eyebrow::after{content:"";flex:1;height:1px;background:var(--line)}
+
+/* ---------- nav ---------- */
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(247,247,244,.87);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.nav__in{max-width:var(--maxw);margin:0 auto;padding:0 24px;height:62px;
+  display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-family:var(--display);font-weight:700;font-size:1.02rem;letter-spacing:-.02em;text-decoration:none}
+.brand span{color:var(--accent)}
+.nav__links{display:flex;gap:28px;align-items:center}
+.nav__links a{
+  font-size:.875rem;font-weight:500;color:var(--muted);text-decoration:none;
+  padding:4px 0;border-bottom:1.5px solid transparent;transition:color .16s,border-color .16s;
+}
+.nav__links a:hover,.nav__links a:focus-visible{color:var(--ink);border-bottom-color:var(--accent)}
+@media(max-width:760px){.nav__links{display:none}}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--sans);font-size:.9rem;font-weight:600;text-decoration:none;
+  padding:11px 20px;border-radius:7px;border:1px solid var(--ink);
+  background:var(--ink);color:#fff;transition:transform .16s,box-shadow .16s,background .16s;
+}
+.btn:hover{transform:translateY(-1.5px);box-shadow:0 6px 18px rgba(23,25,29,.16)}
+.btn--ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn--ghost:hover{border-color:var(--ink);box-shadow:none}
+.btn-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+
+/* ---------- hero ---------- */
+.hero{padding:104px 0 88px;position:relative;overflow:hidden}
+.status{
+  display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);
+  font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);
+  border:1px solid var(--line);background:var(--card);border-radius:100px;padding:6px 14px;margin-bottom:30px;
+}
+.dot{width:6px;height:6px;border-radius:50%;background:#2FA36B;box-shadow:0 0 0 3px rgba(47,163,107,.15)}
+.hero h1{max-width:17ch}
+.hero .lede{margin-top:24px}
+.hero__meta{
+  margin-top:44px;padding-top:22px;border-top:1px solid var(--line);
+  font-family:var(--mono);font-size:.75rem;color:var(--muted);
+  display:flex;flex-wrap:wrap;gap:10px 26px;
+}
+
+/* signature: focus reticle */
+.reticle{
+  position:absolute;top:96px;right:-40px;width:340px;height:340px;
+  pointer-events:none;opacity:.5;
+}
+.reticle span{position:absolute;width:34px;height:34px;border:2px solid var(--accent)}
+.reticle span:nth-child(1){top:0;left:0;border-right:0;border-bottom:0}
+.reticle span:nth-child(2){top:0;right:0;border-left:0;border-bottom:0}
+.reticle span:nth-child(3){bottom:0;left:0;border-right:0;border-top:0}
+.reticle span:nth-child(4){bottom:0;right:0;border-left:0;border-top:0}
+@media(max-width:1000px){.reticle{display:none}}
+
+/* ---------- about ---------- */
+.about{display:grid;grid-template-columns:1.35fr .85fr;gap:56px;align-items:start}
+@media(max-width:820px){.about{grid-template-columns:1fr;gap:34px}}
+.factlist{border-top:1px solid var(--line)}
+.factlist div{
+  display:flex;justify-content:space-between;gap:18px;padding:13px 0;
+  border-bottom:1px solid var(--line);font-size:.9rem;
+}
+.factlist dt{font-family:var(--mono);font-size:.73rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.factlist dd{margin:0;font-weight:500;text-align:right}
+
+/* ---------- skills ---------- */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:2px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.skill{background:var(--card);padding:24px 22px}
+.skill h3{font-size:.79rem;font-family:var(--mono);font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:13px}
+.skill ul{margin:0;padding:0;list-style:none}
+.skill li{font-size:.905rem;padding:3.5px 0;color:#3C4149}
+
+/* ---------- experience ---------- */
+.role{
+  display:grid;grid-template-columns:180px 1fr;gap:34px;
+  padding:30px 0;border-top:1px solid var(--line);
+}
+.role:last-child{border-bottom:1px solid var(--line)}
+.role__when{font-family:var(--mono);font-size:.775rem;color:var(--muted);letter-spacing:.02em;padding-top:4px}
+.role h3{margin-bottom:3px}
+.role__org{font-size:.905rem;color:var(--muted);margin-bottom:14px}
+.role ul{margin:0;padding-left:19px}
+.role li{margin-bottom:7px;color:#3C4149;font-size:.945rem}
+@media(max-width:700px){.role{grid-template-columns:1fr;gap:12px}}
+
+/* ---------- projects ---------- */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:800px){.grid2{grid-template-columns:1fr}}
+.proj{
+  background:var(--card);border:1px solid var(--line);border-radius:11px;
+  padding:28px 26px;display:flex;flex-direction:column;
+  transition:border-color .18s,box-shadow .18s,transform .18s;
+}
+.proj:hover{border-color:#CFCFC6;box-shadow:var(--shadow);transform:translateY(-2px)}
+.proj__tag{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:12px}
+.proj h3{margin-bottom:10px}
+.proj p{font-size:.935rem;color:#3C4149;margin-bottom:18px}
+.spec{
+  margin-top:auto;padding-top:16px;border-top:1px dashed var(--line);
+  font-family:var(--mono);font-size:.715rem;color:var(--muted);line-height:1.9;
+}
+.proj__link{
+  display:inline-flex;align-items:center;gap:6px;margin-top:16px;
+  font-size:.85rem;font-weight:600;text-decoration:none;color:var(--ink);
+  border-bottom:1.5px solid var(--accent);padding-bottom:1px;align-self:flex-start;
+}
+.proj__link:hover{color:var(--accent-deep)}
+
+/* ---------- case study ---------- */
+.case{
+  background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:40px 38px;margin-bottom:26px;position:relative;
+}
+.case::before{
+  content:"";position:absolute;top:-1px;left:26px;width:52px;height:3px;background:var(--accent);border-radius:0 0 2px 2px;
+}
+@media(max-width:640px){.case{padding:28px 22px}}
+.case__head{display:flex;flex-wrap:wrap;gap:14px;align-items:baseline;justify-content:space-between;margin-bottom:8px}
+.case__kicker{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.case h2{font-size:clamp(1.4rem,2.6vw,1.85rem);margin-bottom:14px}
+.case__block{margin-top:26px}
+.case__block h4{
+  font-family:var(--mono);font-size:.735rem;font-weight:500;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--accent-deep);margin-bottom:9px;
+}
+.case__block p,.case__block li{font-size:.95rem;color:#3C4149}
+.case__block ul{margin:0;padding-left:19px}
+.case__block li{margin-bottom:6px}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:4px}
+.chip{
+  font-family:var(--mono);font-size:.715rem;color:#3C4149;
+  background:var(--paper);border:1px solid var(--line);border-radius:5px;padding:4px 9px;
+}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+@media(max-width:700px){.split{grid-template-columns:1fr}}
+
+/* ---------- why ---------- */
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:24px}
+.why__item{padding-top:18px;border-top:2px solid var(--ink)}
+.why__item h3{font-size:1.02rem;margin-bottom:8px}
+.why__item p{font-size:.925rem;color:#3C4149;margin:0}
+
+/* ---------- contact ---------- */
+.contact{background:var(--ink);color:#F2F2EE;border-radius:14px;padding:52px 44px;margin-bottom:70px}
+.contact h2{color:#fff;max-width:18ch}
+.contact .lede{color:#B8BDC4}
+.contact .btn{background:var(--accent);border-color:var(--accent);color:#17191D}
+.contact .btn:hover{box-shadow:0 6px 18px rgba(224,164,34,.3)}
+.contact .btn--ghost{background:transparent;color:#F2F2EE;border-color:#3A3E45}
+.contact .btn--ghost:hover{border-color:#F2F2EE}
+.contact__meta{margin-top:34px;padding-top:22px;border-top:1px solid #2C3037;
+  font-family:var(--mono);font-size:.75rem;color:#8A9099;display:flex;flex-wrap:wrap;gap:9px 26px}
+@media(max-width:640px){.contact{padding:34px 24px}}
+
+/* ---------- footer ---------- */
+.foot{border-top:1px solid var(--line);padding:26px 0 40px;
+  display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;
+  font-family:var(--mono);font-size:.74rem;color:var(--muted)}
+.foot a{text-decoration:none}
+.foot a:hover{color:var(--ink)}
+
+/* ---------- a11y + motion ---------- */
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;padding:10px 16px;z-index:100;border-radius:0 0 6px 0}
+.skip:focus{left:0}
+:focus-visible{outline:2.5px solid var(--accent-deep);outline-offset:3px;border-radius:3px}
+
+.rise{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease}
+.rise.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}
+  .rise{opacity:1;transform:none}
+}
+</style>
 </head>
 <body>
-  <nav class="nav">
-    <div class="wrap nav-in">
-      <a class="brand" href="#">Bazil<span>.</span></a>
-      <div class="links">
-        <a href="#work">Work</a><a href="#expertise">Expertise</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
-      </div>
-      <a class="nav-cta" href="#contact">Let's talk →</a>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="nav" aria-label="Primary">
+  <div class="nav__in">
+    <a class="brand" href="#top">Bazil Hassan<span>.</span></a>
+    <div class="nav__links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#work">Work</a>
+      <a href="#case-opic">Case studies</a>
+      <a href="#contact">Contact</a>
     </div>
-  </nav>
+    <a class="btn" href="#contact">Get in touch</a>
+  </div>
+</nav>
 
-  <main>
-    <header class="hero">
-      <div class="wrap reveal">
-        <div class="availability"><span class="pulse"></span> Available for remote opportunities</div>
-        <h1>Senior iOS Engineer for <span class="accent">complex mobile products.</span></h1>
-        <p class="lead">I build production iOS applications with Swift, UIKit and SwiftUI — with deep experience in camera systems, spatial video, AVFoundation, WebRTC and real-time media.</p>
-        <div class="hero-row">
-          <a class="button primary" href="#work">Explore my work ↘</a>
-          <a class="button" href="YOUR_RESUME_URL">View resume ↗</a>
-          <a class="button" href="YOUR_LINKEDIN_URL" target="_blank" rel="noopener">LinkedIn ↗</a>
-        </div>
-        <div class="small-note" style="margin-top:18px">Remote · International teams · Contract / Full-time</div>
+<main id="main">
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="reticle" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+  <div class="wrap">
+    <p class="status"><span class="dot" aria-hidden="true"></span> Available for remote work</p>
+    <h1>I build iOS apps where the camera is the hard part.</h1>
+    <p class="lede">Senior iOS engineer, 6+ years. I work below the UI layer on capture pipelines, live streaming and spatial media — the parts of an app that are difficult to get right and expensive to get wrong.</p>
+    <div class="btn-row">
+      <a class="btn" href="#case-opic">Read a case study</a>
+      <a class="btn btn--ghost" href="/resume.pdf">Download résumé</a>
+      <a class="btn btn--ghost" href="https://www.linkedin.com/in/bazil-hassan/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+    <div class="hero__meta">
+      <span>Swift · SwiftUI · UIKit</span>
+      <span>AVFoundation · MV-HEVC</span>
+      <span>WebRTC · LiveKit</span>
+      <span>Remote · International teams</span>
+    </div>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section class="band" id="about">
+  <div class="wrap">
+    <p class="eyebrow">About</p>
+    <div class="about">
+      <div>
+        <h2>Most iOS work is CRUD. Mine isn't.</h2>
+        <p class="lede" style="margin-top:18px">Plenty of engineers can wire a REST API to a table view. Far fewer have shipped an app where <code>AVCaptureSession</code> has to survive a backgrounded app, a rotated device, a dropped network and a user tapping record at the wrong moment.</p>
+        <p>That's the work I've spent the last several years on: custom camera experiences, spatial photo and video capture, high frame-rate modes, and real-time streaming built on WebRTC and LiveKit. It's the layer where Apple's documentation runs out and you're reading capture-device capability tables to work out why one iPhone model behaves differently to another.</p>
+        <p>I've delivered this inside production apps with existing users, which means the constraint is never just "make it work" — it's "add this without breaking the camera that already ships." I'm comfortable owning that risk, writing the migration path, and being the person who explains the trade-off to a founder in plain language.</p>
+        <p>I work remotely with teams across the US, UK, EU and Australia, as an independent contractor or through platforms like Deel and Remote.</p>
       </div>
-    </header>
+      <dl class="factlist">
+        <div><dt>Role</dt><dd>Senior iOS Engineer</dd></div>
+        <div><dt>Experience</dt><dd>6+ years</dd></div>
+        <div><dt>Focus</dt><dd>Camera · Real-time video</dd></div>
+        <div><dt>Primary stack</dt><dd>Swift · AVFoundation</dd></div>
+        <div><dt>Availability</dt><dd>Contract / Full-time</dd></div>
+        <div><dt>Working hours</dt><dd>Overlaps US &amp; EU</dd></div>
+        <div><dt>Engagement</dt><dd>Direct or via Deel</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
 
-    <section class="section">
-      <div class="wrap reveal">
-        <div class="kicker">Why me</div>
-        <h2>Not just another Swift developer.</h2>
-        <p class="intro">My strongest work sits at the intersection of native iOS, camera capture and real-time media — areas where production reliability matters as much as UI.</p>
-        <div class="proof">
-          <div class="proof-card"><strong>7+</strong><span>Years building iOS products</span></div>
-          <div class="proof-card"><strong>50+</strong><span>Apps / projects worked on</span></div>
-          <div class="proof-card"><strong>Media</strong><span>Camera · spatial video · WebRTC · LiveKit</span></div>
+<!-- SKILLS -->
+<section class="band" id="skills">
+  <div class="wrap">
+    <p class="eyebrow">Technical skills</p>
+    <h2 style="margin-bottom:34px">A native-first stack, weighted toward media.</h2>
+    <div class="skills">
+      <div class="skill">
+        <h3>Languages &amp; UI</h3>
+        <ul><li>Swift</li><li>SwiftUI</li><li>UIKit</li><li>Objective-C</li></ul>
+      </div>
+      <div class="skill">
+        <h3>Camera &amp; media</h3>
+        <ul><li>AVFoundation</li><li>AVCaptureSession</li><li>MV-HEVC / spatial video</li><li>Core Image</li><li>High frame-rate capture</li></ul>
+      </div>
+      <div class="skill">
+        <h3>Real-time</h3>
+        <ul><li>WebRTC</li><li>LiveKit</li><li>Twilio</li><li>Live streaming pipelines</li></ul>
+      </div>
+      <div class="skill">
+        <h3>Architecture</h3>
+        <ul><li>Clean Architecture</li><li>MVVM</li><li>VIPER</li><li>SOLID principles</li><li>Modularisation</li></ul>
+      </div>
+      <div class="skill">
+        <h3>Data &amp; backend</h3>
+        <ul><li>Core Data</li><li>Realm</li><li>Firebase</li><li>REST / JSON</li></ul>
+      </div>
+      <div class="skill">
+        <h3>Graphics &amp; vision</h3>
+        <ul><li>ARKit</li><li>Vision</li><li>Core Image filters</li></ul>
+      </div>
+      <div class="skill">
+        <h3>Cross-platform</h3>
+        <ul><li>React Native</li><li>Native modules (iOS)</li><li>Bridging Swift ↔ JS</li></ul>
+      </div>
+      <div class="skill">
+        <h3>Delivery</h3>
+        <ul><li>Git · SPM · CocoaPods</li><li>TestFlight</li><li>App Store submission</li><li>Code review · Mentoring</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="band" id="experience">
+  <div class="wrap">
+    <p class="eyebrow">Experience</p>
+    <h2 style="margin-bottom:30px">Built for production, not demos.</h2>
+
+    <article class="role">
+      <div class="role__when">[[ START – PRESENT ]]</div>
+      <div>
+        <h3>Senior iOS Engineer</h3>
+        <p class="role__org">[[ COMPANY NAME ]] · Remote</p>
+        <ul>
+          <li>Own the camera and media layer of a production iOS app, covering capture-session lifecycle, spatial photo and video, and multiple capture modes across device generations.</li>
+          <li>Built real-time streaming features on LiveKit and WebRTC, including capture, orientation handling and video-quality tuning.</li>
+          <li>[[ ADD ONE QUANTIFIED OUTCOME — e.g. crash rate, users, launch scope, review-time reduction ]]</li>
+          <li>Review code and mentor engineers on AVFoundation and iOS architecture.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="role">
+      <div class="role__when">[[ START – END ]]</div>
+      <div>
+        <h3>iOS Engineer</h3>
+        <p class="role__org">[[ COMPANY NAME ]] · [[ LOCATION / REMOTE ]]</p>
+        <ul>
+          <li>Delivered native iOS features inside React Native products, writing native modules where platform APIs were required.</li>
+          <li>Integrated third-party SDKs and shipped releases through TestFlight and App Store review.</li>
+          <li>[[ ADD ONE QUANTIFIED OUTCOME ]]</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="role">
+      <div class="role__when">[[ START – END ]]</div>
+      <div>
+        <h3>iOS Developer</h3>
+        <p class="role__org">[[ COMPANY NAME ]] · [[ LOCATION / REMOTE ]]</p>
+        <ul>
+          <li>[[ RESPONSIBILITY FROM CV ]]</li>
+          <li>[[ RESPONSIBILITY FROM CV ]]</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- WORK -->
+<section class="band" id="work">
+  <div class="wrap">
+    <p class="eyebrow">Selected work</p>
+    <h2 style="margin-bottom:32px">Four problems worth a closer look.</h2>
+    <div class="grid2">
+
+      <article class="proj">
+        <p class="proj__tag">Camera systems</p>
+        <h3>OPIC3D — Spatial Camera</h3>
+        <p>Spatial photo and video capture on iPhone, covering capture-session lifecycle, camera modes, and the media workflow from capture through to playback and sharing.</p>
+        <div class="spec">Swift · AVFoundation<br>MV-HEVC · Spatial video<br>Shipped to App Store</div>
+        <a class="proj__link" href="https://apps.apple.com/us/app/opic3d-spatial-videos-reels/id6750488011" target="_blank" rel="noopener">View on the App Store ↗</a>
+      </article>
+
+      <article class="proj">
+        <p class="proj__tag">Real-time media</p>
+        <h3>Live Streaming Pipeline</h3>
+        <p>Real-time video built on LiveKit and WebRTC alongside AVFoundation capture — covering orientation, audio engine behaviour, frame processing and video quality under variable network conditions.</p>
+        <div class="spec">LiveKit · WebRTC<br>AVFoundation<br>Adaptive quality</div>
+      </article>
+
+      <article class="proj">
+        <p class="proj__tag">Capture pipeline</p>
+        <h3>Advanced Camera Modes</h3>
+        <p>Photo, video, spatial and slow-motion modes in one capture architecture, with device-capability checks and safe session transitions between modes.</p>
+        <div class="spec">AVCaptureSession<br>120 / 240 FPS<br>Device capability gating</div>
+      </article>
+
+      <article class="proj">
+        <p class="proj__tag">Education · Cross-platform</p>
+        <h3>Sibme</h3>
+        <p>Video coaching platform for educators — recording, uploading and annotating classroom video, with the iOS capture and playback layer built natively.</p>
+        <div class="spec">Swift · React Native<br>Video capture &amp; upload<br>Shipped to App Store</div>
+        <a class="proj__link" href="https://apps.apple.com/us/app/sibme/id629939151" target="_blank" rel="noopener">View on the App Store ↗</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section class="band" id="case-opic">
+  <div class="wrap">
+    <p class="eyebrow">Case study 01</p>
+
+    <article class="case">
+      <div class="case__head">
+        <span class="case__kicker">OPIC3D · iOS · Spatial capture</span>
+        <a class="proj__link" style="margin-top:0" href="https://apps.apple.com/us/app/opic3d-spatial-videos-reels/id6750488011" target="_blank" rel="noopener">App Store ↗</a>
+      </div>
+      <h2>Adding spatial capture without breaking the camera that already shipped.</h2>
+
+      <div class="split">
+        <div class="case__block">
+          <h4>Overview</h4>
+          <p>OPIC3D captures spatial photos and video on iPhone and turns them into shareable 3D reels. The camera is not a feature of the product — it <em>is</em> the product, so any regression in capture is a regression in the whole app.</p>
+        </div>
+        <div class="case__block">
+          <h4>My role</h4>
+          <p>iOS engineer on the capture layer. Responsible for the capture-session architecture, spatial photo and video capture, camera mode transitions, and keeping existing capture behaviour stable while new modes were added.</p>
         </div>
       </div>
-    </section>
 
-    <section class="section" id="work">
-      <div class="wrap reveal">
-        <div class="kicker">Selected work</div>
-        <h2>Engineering work worth a closer look.</h2>
-        <p class="intro">The portfolio is intentionally project-first. Each project will show the product, my role, the difficult engineering problem, the solution and the outcome.</p>
+      <div class="case__block">
+        <h4>The challenge</h4>
+        <p>Spatial capture needed to sit alongside the modes users already relied on, on a device fleet where capability differs by model. A naive implementation reconfigures the session on every mode change — which produces visible preview stalls, dropped frames at the moment of capture, and inconsistent behaviour between devices that support spatial capture and those that don't.</p>
+      </div>
 
-        <div class="work-grid">
-          <article class="project">
-            <div class="visual"><span class="label">OPIC · Spatial Camera</span><div class="phone"><div class="camera-ui"></div></div></div>
-            <div class="project-body">
-              <div class="project-meta"><span>01 / Camera systems</span><span>iOS</span></div>
-              <h3>OPIC Spatial Camera</h3>
-              <p>Advanced iOS camera experience covering spatial photo/video capture, camera modes, media workflows and capture-session lifecycle.</p>
-              <div class="tags"><span class="tag">Swift</span><span class="tag">AVFoundation</span><span class="tag">MV-HEVC</span><span class="tag">Spatial Video</span></div>
-            </div>
-          </article>
+      <div class="case__block">
+        <h4>Technical approach</h4>
+        <ul>
+          <li>Built mode switching around a single long-lived <code>AVCaptureSession</code>, batching input and output changes inside <code>beginConfiguration()</code> / <code>commitConfiguration()</code> so the preview never tears down between modes.</li>
+          <li>Gated spatial capture behind runtime capability checks on <code>AVCaptureDevice</code> formats rather than device-model strings, so the feature degrades cleanly on hardware that can't support it.</li>
+          <li>Handled the MV-HEVC output path for spatial media, including the metadata required for correct playback.</li>
+          <li>Made session interruption and lifecycle handling explicit — backgrounding, incoming calls, and route changes — so returning to the app resumes a valid session rather than a black preview.</li>
+        </ul>
+      </div>
 
-          <article class="project">
-            <div class="visual"><span class="label">OPIC · Live Streaming</span><div class="phone"><div class="stream-ui"></div></div></div>
-            <div class="project-body">
-              <div class="project-meta"><span>02 / Real-time media</span><span>iOS</span></div>
-              <h3>Real-time Live Streaming</h3>
-              <p>Real-time media work combining LiveKit, WebRTC and AVFoundation, including orientation, capture and video-quality challenges.</p>
-              <div class="tags"><span class="tag">LiveKit</span><span class="tag">WebRTC</span><span class="tag">AVFoundation</span><span class="tag">Streaming</span></div>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="visual"><span class="label">Camera · Slow Motion</span><div class="phone"><div class="camera-ui" style="background:linear-gradient(145deg,#2a2638,#101318 52%,#1d3438)"></div></div></div>
-            <div class="project-body">
-              <div class="project-meta"><span>03 / Capture pipeline</span><span>iOS</span></div>
-              <h3>Advanced Camera Modes</h3>
-              <p>Camera architecture across photo, video, spatial and slow-motion modes, with device capability checks and careful session transitions.</p>
-              <div class="tags"><span class="tag">UIKit</span><span class="tag">120/240 FPS</span><span class="tag">AVCaptureSession</span></div>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="visual"><span class="label">Native + React Native</span><div class="phone"><div class="stream-ui" style="background:linear-gradient(160deg,#142322,#131820 55%,#30241a)"></div></div></div>
-            <div class="project-body">
-              <div class="project-meta"><span>04 / Cross-platform</span><span>Mobile</span></div>
-              <h3>Native iOS + React Native</h3>
-              <p>Native platform work inside React Native products where camera, media and iOS-specific capabilities require deeper native implementation.</p>
-              <div class="tags"><span class="tag">React Native</span><span class="tag">Swift</span><span class="tag">Firebase</span></div>
-            </div>
-          </article>
+      <div class="split">
+        <div class="case__block">
+          <h4>Key engineering decisions</h4>
+          <ul>
+            <li>Capability detection at runtime, not by device list — new hardware works without a code change.</li>
+            <li>One session, reconfigured, rather than a session per mode — avoids teardown latency at the exact moment users expect the camera to be ready.</li>
+            <li>Capture logic kept out of view controllers so it could be reasoned about and tested independently of the UI.</li>
+          </ul>
         </div>
-
-        <div class="case">
-          <div>
-            <div class="kicker">Featured case study</div>
-            <h3 class="case-title">Building a camera system without breaking the product around it.</h3>
-            <p class="case-sub">OPIC · iOS · Camera / Spatial Media / Streaming</p>
+        <div class="case__block">
+          <h4>Technologies</h4>
+          <div class="chips">
+            <span class="chip">Swift</span><span class="chip">AVFoundation</span>
+            <span class="chip">AVCaptureSession</span><span class="chip">MV-HEVC</span>
+            <span class="chip">Spatial video</span><span class="chip">UIKit</span>
           </div>
-          <div>
-            <div class="case-item"><h4>The problem</h4><p>Add advanced capture and streaming capabilities while preserving existing camera modes, preview behavior and session stability.</p></div>
-            <div class="case-item"><h4>The engineering</h4><p>Worked directly with AVCaptureSession, camera device capabilities, preview layers, media formats and state transitions.</p></div>
-            <div class="case-item"><h4>Real-time media</h4><p>Integrated LiveKit/WebRTC workflows and worked through orientation, audio-engine, frame-processing and video-quality problems.</p></div>
-            <div class="case-item"><h4>What this demonstrates</h4><p>Comfort working below the UI layer on complex iOS media systems while protecting existing production functionality.</p></div>
+        </div>
+      </div>
+
+      <div class="split">
+        <div class="case__block">
+          <h4>Results</h4>
+          <p>[[ ADD REAL OUTCOME — e.g. shipped to the App Store on [date]; spatial capture available across [N] modes; crash-free sessions at [X]%; capture-related support tickets down [Y]%. Use one number you can defend in an interview. ]]</p>
+        </div>
+        <div class="case__block">
+          <h4>What I took from it</h4>
+          <p>On camera work, the expensive bugs are almost never in the capture call itself — they're in state transitions. Mode switches, interruptions, and orientation changes are where a capture pipeline actually fails, so that's where the architecture has to be deliberate.</p>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="band band--plain" id="case-sibme" style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow">Case study 02</p>
+
+    <article class="case">
+      <div class="case__head">
+        <span class="case__kicker">Sibme · iOS · Video capture &amp; upload</span>
+        <a class="proj__link" style="margin-top:0" href="https://apps.apple.com/us/app/sibme/id629939151" target="_blank" rel="noopener">App Store ↗</a>
+      </div>
+      <h2>Reliable classroom video capture on unreliable school networks.</h2>
+
+      <div class="split">
+        <div class="case__block">
+          <h4>Overview</h4>
+          <p>Sibme is a video coaching platform for educators: teachers record classroom sessions, upload them, and coaches annotate the footage with time-stamped feedback. The recording is often long-form and captured somewhere with poor connectivity.</p>
+        </div>
+        <div class="case__block">
+          <h4>My role</h4>
+          <p>[[ CONFIRM YOUR SCOPE — e.g. iOS engineer responsible for capture, upload and playback; or feature-level ownership of X. Be specific about what you personally built. ]]</p>
+        </div>
+      </div>
+
+      <div class="case__block">
+        <h4>The challenge</h4>
+        <p>[[ DESCRIBE THE REAL PROBLEM YOU HIT. A strong version names the failure: e.g. "long recordings were failing to upload over school Wi-Fi, and a failed upload lost the recording entirely." ]]</p>
+      </div>
+
+      <div class="case__block">
+        <h4>Technical approach</h4>
+        <ul>
+          <li>[[ WHAT YOU BUILT — e.g. background upload via URLSession background sessions, chunked/resumable transfer, local persistence of recordings until upload confirmed ]]</li>
+          <li>[[ WHAT ELSE — e.g. playback with time-stamped annotation sync ]]</li>
+          <li>[[ WHAT BROKE AND HOW YOU FIXED IT — this is the most valuable line on the page ]]</li>
+        </ul>
+      </div>
+
+      <div class="split">
+        <div class="case__block">
+          <h4>Key engineering decisions</h4>
+          <ul>
+            <li>[[ A TRADE-OFF YOU MADE AND WHY ]]</li>
+            <li>[[ AN ALTERNATIVE YOU REJECTED AND WHY ]]</li>
+          </ul>
+        </div>
+        <div class="case__block">
+          <h4>Technologies</h4>
+          <div class="chips">
+            <span class="chip">Swift</span><span class="chip">AVFoundation</span>
+            <span class="chip">React Native</span><span class="chip">URLSession</span>
+            <span class="chip">[[ ADD / REMOVE ]]</span>
           </div>
         </div>
       </div>
-    </section>
 
-    <section class="section" id="expertise">
-      <div class="wrap reveal">
-        <div class="kicker">Technical expertise</div>
-        <h2>A native-first engineering stack.</h2>
-        <p class="intro">Focused on technologies that help ship reliable production mobile products.</p>
-        <div class="stack">
-          <div class="stack-item"><b>iOS</b>Swift · UIKit · SwiftUI · Objective-C</div>
-          <div class="stack-item"><b>Media</b>AVFoundation · Core Image · MV-HEVC</div>
-          <div class="stack-item"><b>Real-time</b>WebRTC · LiveKit · Twilio</div>
-          <div class="stack-item"><b>Architecture</b>MVVM · Clean Architecture · VIPER · SOLID</div>
-          <div class="stack-item"><b>Data</b>Core Data · Realm · Firebase</div>
-          <div class="stack-item"><b>Cross-platform</b>React Native · Native Modules</div>
-          <div class="stack-item"><b>Graphics / Vision</b>ARKit · Vision · Core Image</div>
-          <div class="stack-item"><b>Workflow</b>Git · SPM · CocoaPods · Jira</div>
+      <div class="split">
+        <div class="case__block">
+          <h4>Results</h4>
+          <p>[[ ADD REAL OUTCOME ]]</p>
+        </div>
+        <div class="case__block">
+          <h4>What I took from it</h4>
+          <p>[[ ONE HONEST LESSON ]]</p>
         </div>
       </div>
-    </section>
+    </article>
+  </div>
+</section>
 
-    <section class="section" id="experience">
-      <div class="wrap reveal experience">
-        <div>
-          <div class="kicker">Experience</div>
-          <h2>Built for production, not just demos.</h2>
-          <p class="intro">This section should use the exact company names, dates and quantified achievements from the final CV.</p>
-        </div>
-        <div class="timeline">
-          <div class="role"><h3>Senior iOS Engineer</h3><div class="meta">Production mobile applications · Remote</div><p>Developing and maintaining complex iOS applications across camera, media, architecture, networking and product features.</p></div>
-          <div class="role"><h3>iOS / React Native Engineer</h3><div class="meta">Cross-platform mobile products</div><p>Delivered native iOS capabilities and React Native features, integrating platform APIs and third-party SDKs into production applications.</p></div>
-        </div>
+<!-- WHY -->
+<section class="band" id="why">
+  <div class="wrap">
+    <p class="eyebrow">Working together</p>
+    <h2 style="margin-bottom:36px">What you get when you hire me.</h2>
+    <div class="why">
+      <div class="why__item">
+        <h3>Depth where it's scarce</h3>
+        <p>Camera pipelines, spatial media and real-time video are narrow specialisms. If that's where your product's difficulty lives, you're hiring someone who has already made these mistakes on a shipping app.</p>
       </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <div class="wrap reveal">
-        <div class="kicker">Let's work together</div>
-        <h2>Building something difficult on iOS?</h2>
-        <p class="intro">I'm open to senior remote roles, contract work and technically challenging mobile products.</p>
-        <div class="hero-row">
-          <a class="button primary" href="mailto:YOUR_EMAIL@example.com">Email me ↗</a>
-          <a class="button" href="YOUR_LINKEDIN_URL" target="_blank" rel="noopener">LinkedIn ↗</a>
-          <a class="button" href="YOUR_GITHUB_URL" target="_blank" rel="noopener">GitHub ↗</a>
-        </div>
+      <div class="why__item">
+        <h3>I ship through review</h3>
+        <p>Apple rejects for things Google never checks — privacy labels, account deletion, guideline 4.2. I handle submission end-to-end rather than handing you a build and disappearing.</p>
       </div>
-    </section>
-  </main>
+      <div class="why__item">
+        <h3>Care for the existing product</h3>
+        <p>Most of my work has been adding capability to apps that already have users. I plan for the regression risk before writing the feature, not after the crash reports arrive.</p>
+      </div>
+      <div class="why__item">
+        <h3>Written, not just verbal</h3>
+        <p>Async by default. You get scope in writing, trade-offs explained in plain language, and progress you can read without booking a call across time zones.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <footer>
-    <div class="wrap foot"><span>© <span id="year"></span> Bazil Hassan</span><span>Senior iOS Engineer · Remote</span></div>
-  </footer>
+<!-- CONTACT -->
+<section class="band band--plain" id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <p class="eyebrow" style="color:var(--accent)">Contact</p>
+      <h2>Building something difficult on iOS?</h2>
+      <p class="lede" style="margin-top:16px">I'm open to senior remote roles and contract work — particularly anything involving camera capture, live video or spatial media. Send me the problem and I'll tell you honestly whether I'm the right person for it.</p>
+      <div class="btn-row">
+        <a class="btn" href="mailto:bazil@bazilhassan.com">bazil@bazilhassan.com</a>
+        <a class="btn btn--ghost" href="https://www.linkedin.com/in/bazil-hassan/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="btn btn--ghost" href="https://github.com/bazilhassan" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn btn--ghost" href="/resume.pdf">Résumé (PDF)</a>
+      </div>
+      <div class="contact__meta">
+        <span>Available now</span>
+        <span>Remote · Worldwide</span>
+        <span>Contract or full-time</span>
+        <span>Replies within 24h</span>
+      </div>
+    </div>
 
-  <script>
-    const observer = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
-    },{threshold:.12});
-    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+    <div class="foot">
+      <span>© <span id="yr">2026</span> Bazil Hassan — Senior iOS Engineer</span>
+      <span><a href="#top">Back to top ↑</a></span>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+// Scroll reveal
+(function(){
+  var targets = document.querySelectorAll('.band > .wrap > *, .hero .wrap > *');
+  if(!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    return;
+  }
+  targets.forEach(function(el,i){ el.classList.add('rise'); });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  },{threshold:.08, rootMargin:'0px 0px -40px 0px'});
+  targets.forEach(function(el){ io.observe(el); });
+})();
+</script>
+
 </body>
 </html>
