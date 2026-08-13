@@ -1,0 +1,869 @@
+<!doctype html>
+<html lang="en" data-theme="system">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Bazil Hassan is a Senior iOS Engineer with 6+ years of experience building production iOS applications, custom camera systems, spatial video, WebRTC, LiveKit and real-time media.">
+  <meta name="author" content="Bazil Hassan">
+  <meta name="theme-color" content="#0b0d10" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f6f7f8" media="(prefers-color-scheme: light)">
+  <link rel="canonical" href="https://bazilhassan.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bazil Hassan — Senior iOS Engineer">
+  <meta property="og:description" content="Senior iOS Engineer specializing in camera, spatial video and real-time media systems.">
+  <meta property="og:url" content="https://bazilhassan.com/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Bazil Hassan — Senior iOS Engineer">
+  <meta name="twitter:description" content="Swift, SwiftUI, UIKit, AVFoundation, WebRTC, LiveKit, spatial media and production iOS engineering.">
+  <title>Bazil Hassan — Senior iOS Engineer</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23111418'/%3E%3Cpath d='M18 17h17c8 0 13 4 13 11 0 4-2 7-6 9 5 1 8 5 8 10 0 8-6 12-15 12H18V17Zm10 9v8h7c3 0 5-1 5-4 0-3-2-4-5-4h-7Zm0 16v8h8c4 0 6-1 6-4 0-3-2-4-6-4h-8Z' fill='%23fff'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f6f7f8;
+      --bg-elevated: rgba(255,255,255,.78);
+      --surface: #ffffff;
+      --surface-2: #eef0f2;
+      --text: #101216;
+      --muted: #626a75;
+      --soft: #7a828c;
+      --line: #dfe3e8;
+      --line-strong: #cdd2d8;
+      --accent: #0a66c2;
+      --accent-2: #6741d9;
+      --success: #167a51;
+      --shadow: 0 18px 55px rgba(22,28,35,.08);
+      --nav: rgba(246,247,248,.82);
+      --code: #f1f3f5;
+      --hero-glow: rgba(10,102,194,.09);
+      --max: 1180px;
+      --radius: 22px;
+      --radius-sm: 14px;
+      --ease: cubic-bezier(.22,.8,.25,1);
+    }
+
+    [data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #0b0d10;
+      --bg-elevated: rgba(16,18,22,.76);
+      --surface: #111419;
+      --surface-2: #171b21;
+      --text: #f4f6f8;
+      --muted: #a2aab4;
+      --soft: #858e99;
+      --line: #262c35;
+      --line-strong: #343c47;
+      --accent: #72b7ff;
+      --accent-2: #b3a1ff;
+      --success: #5fd4a0;
+      --shadow: 0 22px 70px rgba(0,0,0,.3);
+      --nav: rgba(11,13,16,.78);
+      --code: #181c22;
+      --hero-glow: rgba(96,169,255,.10);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      html[data-theme="system"] {
+        color-scheme: dark;
+        --bg: #0b0d10;
+        --bg-elevated: rgba(16,18,22,.76);
+        --surface: #111419;
+        --surface-2: #171b21;
+        --text: #f4f6f8;
+        --muted: #a2aab4;
+        --soft: #858e99;
+        --line: #262c35;
+        --line-strong: #343c47;
+        --accent: #72b7ff;
+        --accent-2: #b3a1ff;
+        --success: #5fd4a0;
+        --shadow: 0 22px 70px rgba(0,0,0,.3);
+        --nav: rgba(11,13,16,.78);
+        --code: #181c22;
+        --hero-glow: rgba(96,169,255,.10);
+      }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      background:
+        radial-gradient(circle at 72% 7%, var(--hero-glow), transparent 31rem),
+        var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", Inter, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button { font: inherit; }
+    ::selection { background: color-mix(in srgb, var(--accent) 28%, transparent); }
+
+    .skip-link {
+      position: fixed; left: 16px; top: -80px; z-index: 1000;
+      padding: 10px 14px; border-radius: 10px;
+      background: var(--text); color: var(--bg);
+      transition: top .18s ease;
+    }
+    .skip-link:focus { top: 16px; }
+
+    .shell { width: min(var(--max), calc(100% - 40px)); margin-inline: auto; }
+
+    .site-nav {
+      position: sticky; top: 0; z-index: 50;
+      border-bottom: 1px solid color-mix(in srgb, var(--line) 78%, transparent);
+      background: var(--nav);
+      backdrop-filter: saturate(160%) blur(18px);
+    }
+    .nav-inner {
+      min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    }
+    .brand {
+      display: inline-flex; align-items: center; gap: 10px;
+      color: var(--text); text-decoration: none; font-weight: 760; letter-spacing: -.03em;
+    }
+    .brand-mark {
+      width: 31px; height: 31px; display: grid; place-items: center;
+      border-radius: 9px; background: var(--text); color: var(--bg);
+      font-size: 14px; letter-spacing: -.04em;
+    }
+    .nav-links { display: flex; align-items: center; gap: 24px; }
+    .nav-links a {
+      color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 600;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-actions { display: flex; align-items: center; gap: 8px; }
+    .icon-btn {
+      width: 40px; height: 40px; display: grid; place-items: center;
+      border: 1px solid var(--line); border-radius: 11px; color: var(--text);
+      background: color-mix(in srgb, var(--surface) 70%, transparent); cursor: pointer;
+    }
+    .icon-btn:hover { border-color: var(--line-strong); background: var(--surface); }
+
+    :focus-visible { outline: 3px solid color-mix(in srgb, var(--accent) 55%, transparent); outline-offset: 3px; }
+
+    .hero { padding: 120px 0 94px; }
+    .availability {
+      display: inline-flex; align-items: center; gap: 9px;
+      margin-bottom: 26px; padding: 8px 11px;
+      border: 1px solid var(--line); border-radius: 999px;
+      background: color-mix(in srgb, var(--surface) 75%, transparent);
+      color: var(--muted); font-size: 12px; font-weight: 650;
+    }
+    .status-dot {
+      width: 8px; height: 8px; border-radius: 50%; background: var(--success);
+      box-shadow: 0 0 0 5px color-mix(in srgb, var(--success) 12%, transparent);
+    }
+    .hero h1 {
+      max-width: 980px; margin: 0;
+      font-size: clamp(3.3rem, 8.4vw, 7.35rem);
+      line-height: .94; letter-spacing: -.075em; font-weight: 780;
+    }
+    .hero h1 .quiet { color: var(--muted); }
+    .hero-copy {
+      display: grid; grid-template-columns: minmax(0, 760px) auto; gap: 40px;
+      align-items: end; margin-top: 34px;
+    }
+    .hero-copy p { margin: 0; color: var(--muted); font-size: clamp(1.05rem, 1.7vw, 1.28rem); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      min-height: 46px; padding: 0 16px; border: 1px solid var(--line);
+      border-radius: 12px; background: var(--surface); color: var(--text);
+      text-decoration: none; font-size: 13px; font-weight: 700;
+      transition: transform .18s var(--ease), border-color .18s ease, background .18s ease;
+    }
+    .btn:hover { transform: translateY(-2px); border-color: var(--line-strong); }
+    .btn.primary { background: var(--text); color: var(--bg); border-color: var(--text); }
+    .btn.ghost { background: transparent; }
+
+    .hero-proof {
+      margin-top: 68px; display: grid; grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    }
+    .proof-item { padding: 22px 20px 22px 0; }
+    .proof-item + .proof-item { padding-left: 24px; border-left: 1px solid var(--line); }
+    .proof-item strong { display: block; font-size: 1.05rem; letter-spacing: -.025em; }
+    .proof-item span { color: var(--soft); font-size: 12px; }
+
+    section { padding: 96px 0; border-top: 1px solid var(--line); }
+    .section-head {
+      display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 48px;
+      margin-bottom: 48px;
+    }
+    .eyebrow {
+      margin: 3px 0 0; color: var(--soft); font-size: 11px;
+      font-weight: 760; letter-spacing: .16em; text-transform: uppercase;
+    }
+    .section-head h2, .about h2, .contact h2 {
+      margin: 0; font-size: clamp(2.25rem, 5vw, 4.4rem); line-height: 1.02; letter-spacing: -.06em;
+    }
+    .section-intro { max-width: 760px; margin: 18px 0 0; color: var(--muted); font-size: 17px; }
+
+    .about-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 72px; }
+    .about-copy p { max-width: 760px; margin: 0 0 18px; color: var(--muted); font-size: 18px; }
+    .about-copy p:first-of-type { color: var(--text); }
+    .about-side { display: grid; align-content: start; gap: 12px; }
+    .fact-card {
+      padding: 19px; border: 1px solid var(--line); background: var(--surface);
+      border-radius: var(--radius-sm);
+    }
+    .fact-card .label { color: var(--soft); font-size: 11px; text-transform: uppercase; letter-spacing: .12em; }
+    .fact-card .value { margin-top: 4px; font-weight: 720; letter-spacing: -.025em; }
+
+    .skill-groups { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; }
+    .skill-group {
+      padding: 25px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface);
+    }
+    .skill-group h3 { margin: 0 0 14px; font-size: 15px; letter-spacing: -.02em; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; }
+    .tag {
+      display: inline-flex; align-items: center; min-height: 30px; padding: 4px 9px;
+      border-radius: 8px; background: var(--surface-2); color: var(--muted);
+      font-size: 12px; font-weight: 600;
+    }
+
+    .timeline { position: relative; }
+    .role {
+      display: grid; grid-template-columns: 220px minmax(0,1fr); gap: 48px;
+      padding: 32px 0; border-top: 1px solid var(--line);
+    }
+    .role:first-child { border-top: 0; padding-top: 0; }
+    .role-meta { color: var(--soft); font-size: 13px; }
+    .role-meta strong { display: block; color: var(--text); font-size: 14px; margin-bottom: 4px; }
+    .role h3 { margin: 0 0 10px; font-size: 23px; letter-spacing: -.035em; }
+    .role p { margin: 0; color: var(--muted); }
+    .role ul { margin: 14px 0 0; padding-left: 19px; color: var(--muted); }
+    .role li + li { margin-top: 7px; }
+
+    .featured-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 16px; }
+    .project-card {
+      min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius);
+      background: var(--surface); box-shadow: 0 1px 0 rgba(255,255,255,.02);
+      transition: transform .25s var(--ease), border-color .2s ease, box-shadow .25s ease;
+    }
+    .project-card:hover { transform: translateY(-5px); border-color: var(--line-strong); box-shadow: var(--shadow); }
+    .project-visual {
+      min-height: 290px; position: relative; display: grid; place-items: center; overflow: hidden;
+      border-bottom: 1px solid var(--line); background:
+        radial-gradient(circle at 22% 20%, color-mix(in srgb, var(--accent) 20%, transparent), transparent 35%),
+        radial-gradient(circle at 75% 85%, color-mix(in srgb, var(--accent-2) 16%, transparent), transparent 38%),
+        var(--surface-2);
+    }
+    .project-visual .device {
+      width: 145px; height: 254px; border: 5px solid color-mix(in srgb, var(--text) 85%, transparent);
+      border-radius: 28px; position: relative; background: #0b0d10; box-shadow: 0 24px 60px rgba(0,0,0,.22);
+      transform: rotate(-4deg);
+    }
+    .device::before {
+      content: ""; position: absolute; width: 52px; height: 12px; left: 50%; top: 7px;
+      transform: translateX(-50%); border-radius: 99px; background: #20242a; z-index: 2;
+    }
+    .device::after {
+      content: ""; position: absolute; inset: 0; border-radius: 22px;
+      background: linear-gradient(155deg, #14202d, #101319 45%, #30233c);
+    }
+    .visual-label {
+      position: absolute; left: 18px; top: 17px; z-index: 2;
+      padding: 6px 9px; border: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
+      border-radius: 8px; background: color-mix(in srgb, var(--surface) 75%, transparent);
+      color: var(--muted); font-size: 11px; font-weight: 700;
+      backdrop-filter: blur(10px);
+    }
+    .project-body { padding: 26px; }
+    .project-topline {
+      display: flex; justify-content: space-between; gap: 14px; align-items: center;
+      color: var(--soft); font-size: 11px; letter-spacing: .1em; text-transform: uppercase;
+    }
+    .project-card h3 { margin: 14px 0 9px; font-size: 27px; letter-spacing: -.045em; }
+    .project-card p { margin: 0; color: var(--muted); }
+    .project-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+    .text-link {
+      color: var(--text); font-size: 13px; font-weight: 700; text-decoration: none;
+      border-bottom: 1px solid var(--line-strong); padding-bottom: 2px;
+    }
+    .text-link:hover { border-color: var(--text); }
+
+    .opic-visual { min-height: 420px; padding: 22px; align-items: stretch; }
+    .opic-visual img {
+      width: 100%; height: 100%; max-height: 385px; object-fit: cover; object-position: top center;
+      border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 18px 50px rgba(0,0,0,.15);
+    }
+
+    .systems-visual { padding: 34px; place-items: stretch; }
+    .system-map { width: 100%; display: grid; grid-template-columns: 1fr 46px 1fr; align-items: center; gap: 8px; }
+    .system-stack { display: grid; gap: 9px; }
+    .system-node {
+      padding: 14px; border: 1px solid var(--line); border-radius: 12px;
+      background: color-mix(in srgb, var(--surface) 82%, transparent);
+      color: var(--muted); font-size: 12px;
+    }
+    .system-node strong { display: block; color: var(--text); font-size: 13px; margin-bottom: 2px; }
+    .system-arrow { color: var(--soft); text-align: center; font-size: 22px; }
+
+    .case-studies { display: grid; gap: 18px; }
+    .case {
+      display: grid; grid-template-columns: .78fr 1.22fr; gap: 44px;
+      padding: 34px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface);
+    }
+    .case-index { color: var(--soft); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
+    .case h3 { margin: 10px 0 10px; font-size: 30px; line-height: 1.1; letter-spacing: -.045em; }
+    .case-summary { color: var(--muted); margin: 0; }
+    .case-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 0 28px; }
+    .case-block { padding: 17px 0; border-top: 1px solid var(--line); }
+    .case-block:nth-child(-n+2) { border-top: 0; padding-top: 0; }
+    .case-block h4 { margin: 0 0 5px; font-size: 12px; text-transform: uppercase; letter-spacing: .1em; color: var(--soft); }
+    .case-block p { margin: 0; color: var(--muted); font-size: 14px; }
+    .metric {
+      margin-top: 20px; padding: 16px 17px; border-radius: 12px;
+      border: 1px solid color-mix(in srgb, var(--success) 28%, var(--line));
+      background: color-mix(in srgb, var(--success) 7%, var(--surface));
+    }
+    .metric strong { font-size: 25px; letter-spacing: -.04em; }
+    .metric span { display: block; color: var(--muted); font-size: 12px; margin-top: 2px; }
+
+    .more-work {
+      display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; margin-top: 18px;
+    }
+    .mini-card { padding: 21px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface); }
+    .mini-card h3 { margin: 0 0 7px; font-size: 17px; letter-spacing: -.025em; }
+    .mini-card p { margin: 0; color: var(--muted); font-size: 13px; }
+    .mini-card .text-link { display: inline-block; margin-top: 14px; }
+
+    .contact { padding: 110px 0 130px; text-align: center; }
+    .contact h2 { max-width: 900px; margin: 0 auto; }
+    .contact p { max-width: 680px; margin: 22px auto 0; color: var(--muted); font-size: 18px; }
+    .contact-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 28px; }
+    .contact-note { margin-top: 19px; color: var(--soft); font-size: 12px; }
+
+    footer { border-top: 1px solid var(--line); padding: 26px 0 34px; color: var(--soft); font-size: 12px; }
+    .footer-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .footer-links { display: flex; gap: 18px; }
+    .footer-links a { text-decoration: none; }
+    .footer-links a:hover { color: var(--text); }
+
+    .reveal { opacity: 0; transform: translateY(16px); }
+    .reveal.is-visible { opacity: 1; transform: none; transition: opacity .65s var(--ease), transform .65s var(--ease); }
+
+    @media (max-width: 920px) {
+      .nav-links { display: none; }
+      .hero { padding-top: 92px; }
+      .hero-copy, .section-head, .about-grid, .role, .case { grid-template-columns: 1fr; gap: 22px; }
+      .hero-actions { justify-content: flex-start; }
+      .hero-proof { grid-template-columns: repeat(2, 1fr); }
+      .proof-item:nth-child(3) { border-left: 0; border-top: 1px solid var(--line); }
+      .proof-item:nth-child(4) { border-top: 1px solid var(--line); }
+      .featured-grid { grid-template-columns: 1fr; }
+      .case-grid { grid-template-columns: 1fr 1fr; }
+      .more-work { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    }
+
+    @media (max-width: 620px) {
+      .shell { width: min(var(--max), calc(100% - 28px)); }
+      .site-nav .nav-inner { min-height: 64px; }
+      .brand-name { display: none; }
+      .hero { padding: 76px 0 70px; }
+      .hero h1 { font-size: clamp(3rem, 15vw, 4.85rem); }
+      .hero-copy { margin-top: 26px; }
+      .hero-actions .btn { flex: 1 1 auto; }
+      .hero-proof { margin-top: 48px; grid-template-columns: 1fr; }
+      .proof-item, .proof-item + .proof-item { padding: 15px 0; border-left: 0; border-top: 1px solid var(--line); }
+      .proof-item:first-child { border-top: 0; }
+      section { padding: 74px 0; }
+      .section-head { margin-bottom: 34px; }
+      .skill-groups, .case-grid, .more-work { grid-template-columns: 1fr; }
+      .case { padding: 24px; }
+      .case-block:nth-child(2) { border-top: 1px solid var(--line); padding-top: 17px; }
+      .system-map { grid-template-columns: 1fr; }
+      .system-arrow { transform: rotate(90deg); }
+      .project-visual { min-height: 250px; }
+      .opic-visual { min-height: 340px; padding: 14px; }
+      .opic-visual img { max-height: 320px; }
+      .footer-row { align-items: flex-start; flex-direction: column; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Bazil Hassan",
+    "url": "https://bazilhassan.com/",
+    "jobTitle": "Senior iOS Engineer",
+    "email": "mailto:bazil@bazilhassan.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/bazil-hassan/",
+      "https://github.com/bazilhassan"
+    ],
+    "knowsAbout": [
+      "Swift", "SwiftUI", "UIKit", "AVFoundation", "WebRTC", "LiveKit",
+      "Spatial Video", "iOS Architecture", "MVVM", "Clean Architecture"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav class="site-nav" aria-label="Primary navigation">
+    <div class="shell nav-inner">
+      <a class="brand" href="#top" aria-label="Bazil Hassan, home">
+        <span class="brand-mark" aria-hidden="true">BH</span>
+        <span class="brand-name">Bazil Hassan</span>
+      </a>
+
+      <div class="nav-links" aria-label="Page sections">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#work">Work</a>
+        <a href="#cases">Case studies</a>
+      </div>
+
+      <div class="nav-actions">
+        <a class="btn ghost" href="assets/Bazil-Hassan-Resume.pdf" target="_blank" rel="noopener">Résumé</a>
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Change color theme" title="Change color theme">
+          <span id="themeIcon" aria-hidden="true">◐</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <header class="hero" id="top">
+      <div class="shell reveal">
+        <div class="availability"><span class="status-dot" aria-hidden="true"></span> Open to remote senior iOS roles & selected contracts</div>
+        <h1>iOS engineering for <span class="quiet">camera, video & real-time products.</span></h1>
+        <div class="hero-copy">
+          <p>
+            I’m Bazil Hassan, a Senior iOS Engineer with 6+ years of production experience.
+            I build native iOS systems with Swift, SwiftUI and UIKit, with deeper specialization in
+            AVFoundation, spatial media, WebRTC and LiveKit.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#work">View selected work ↓</a>
+            <a class="btn" href="mailto:bazil@bazilhassan.com">Email me ↗</a>
+          </div>
+        </div>
+
+        <div class="hero-proof" aria-label="Professional highlights">
+          <div class="proof-item"><strong>6+ years</strong><span>Production mobile engineering</span></div>
+          <div class="proof-item"><strong>Lead experience</strong><span>Team of 3 iOS engineers</span></div>
+          <div class="proof-item"><strong>40% lower</strong><span>Spatial media processing latency</span></div>
+          <div class="proof-item"><strong>App Store</strong><span>Shipped across multiple product domains</span></div>
+        </div>
+      </div>
+    </header>
+
+    <section id="about" class="about">
+      <div class="shell reveal">
+        <div class="section-head">
+          <p class="eyebrow">01 / About</p>
+          <div>
+            <h2>Engineering beyond the screen.</h2>
+            <p class="section-intro">
+              My work spans product UI, architecture, media pipelines, networking, performance and release delivery.
+              The projects I’m most useful on are the ones where the iOS layer itself is part of the hard problem.
+            </p>
+          </div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-copy">
+            <p>
+              I currently lead iOS development on OPIC3D, a spatial camera and live-streaming product.
+              My work includes custom capture flows, stereoscopic media, camera controls, transcoding,
+              LiveKit streaming and production performance work.
+            </p>
+            <p>
+              Earlier, I shipped coaching, fitness, fintech, telemedicine, social, marketplace and productivity products.
+              I’m comfortable joining an established codebase, tracing a production issue across layers, and delivering a fix
+              without destabilizing the product around it.
+            </p>
+            <p>
+              I also lead and review implementation work, collaborate with product/design/QA across time zones,
+              and take features from technical design through TestFlight and App Store release.
+            </p>
+          </div>
+
+          <aside class="about-side" aria-label="Quick facts">
+            <div class="fact-card"><div class="label">Based in</div><div class="value">Lahore, Pakistan · Remote</div></div>
+            <div class="fact-card"><div class="label">Current focus</div><div class="value">Spatial media, camera systems & real-time video</div></div>
+            <div class="fact-card"><div class="label">Education</div><div class="value">BSc Computer Science · University of Sargodha, 2017</div></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="shell reveal">
+        <div class="section-head">
+          <p class="eyebrow">02 / Expertise</p>
+          <div>
+            <h2>A native-first stack for production iOS.</h2>
+            <p class="section-intro">Grouped around the systems I actually work with rather than a wall of keywords.</p>
+          </div>
+        </div>
+
+        <div class="skill-groups">
+          <article class="skill-group">
+            <h3>iOS & language</h3>
+            <div class="tags"><span class="tag">Swift</span><span class="tag">SwiftUI</span><span class="tag">UIKit</span><span class="tag">Objective-C</span><span class="tag">Combine</span><span class="tag">Async/Await</span><span class="tag">GCD</span></div>
+          </article>
+          <article class="skill-group">
+            <h3>Camera, media & real-time</h3>
+            <div class="tags"><span class="tag">AVFoundation</span><span class="tag">Custom Camera Pipelines</span><span class="tag">Spatial Video</span><span class="tag">Stereoscopic Media</span><span class="tag">LiveKit</span><span class="tag">WebRTC</span><span class="tag">Twilio</span><span class="tag">Core Image</span></div>
+          </article>
+          <article class="skill-group">
+            <h3>Architecture & quality</h3>
+            <div class="tags"><span class="tag">MVVM</span><span class="tag">Clean Architecture</span><span class="tag">VIPER</span><span class="tag">Protocol-Oriented Design</span><span class="tag">XCTest</span><span class="tag">Instruments</span><span class="tag">Code Review</span></div>
+          </article>
+          <article class="skill-group">
+            <h3>Data, backend & delivery</h3>
+            <div class="tags"><span class="tag">REST APIs</span><span class="tag">Firebase</span><span class="tag">Firestore</span><span class="tag">Core Data</span><span class="tag">Realm</span><span class="tag">Socket.IO</span><span class="tag">Fastlane</span><span class="tag">TestFlight</span><span class="tag">App Store Connect</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="shell reveal">
+        <div class="section-head">
+          <p class="eyebrow">03 / Experience</p>
+          <div>
+            <h2>Production ownership across the iOS lifecycle.</h2>
+            <p class="section-intro">From custom media systems to shipping, production support and mentoring.</p>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <article class="role">
+            <div class="role-meta"><strong>Uverse Digital</strong>Jun 2025 — Present<br>Remote (UK)</div>
+            <div>
+              <h3>Lead iOS Developer / Senior iOS Developer</h3>
+              <p>Leading a team of 3 iOS engineers on OPIC3D, a spatial camera and live-streaming product.</p>
+              <ul>
+                <li>Build standard and spatial photo/video capture, camera controls, stereoscopic processing and spatial metadata with AVFoundation.</li>
+                <li>Ship LiveKit-powered live streaming and integrate backend services into real-time product workflows.</li>
+                <li>Reduced media-processing latency by approximately 40% through capture-session and transcoding refactoring.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="role">
+            <div class="role-meta"><strong>3S Solutions Pvt. Ltd.</strong>Oct 2022 — May 2025<br>Lahore, Pakistan</div>
+            <div>
+              <h3>Senior iOS Developer / Senior iOS Engineer</h3>
+              <p>Worked on Sibme’s established video-coaching platform and native iOS work for Mr. Rebounder.</p>
+              <ul>
+                <li>Delivered 10+ major Sibme features including file/folder flows, background audio and AI-assisted forms.</li>
+                <li>Refactored AVFoundation media pipelines, reducing video buffering by 30% and improving playback reliability.</li>
+                <li>Introduced Fastlane/TestFlight automation that reduced manual release effort by 50% and supported weekly releases.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="role">
+            <div class="role-meta"><strong>Tiksom Pvt. Limited</strong>Sep 2020 — Sep 2022<br>Lahore, Pakistan</div>
+            <div>
+              <h3>Mobile App Developer / iOS Developer</h3>
+              <p>Shipped production apps across fintech, wellness, productivity and marketplace products.</p>
+              <ul>
+                <li>Worked on Stonks Trading, Verideal, Tap for Joy and Weeks.</li>
+                <li>Served as sole iOS developer for Weeks, building core UI/data flows with Firestore synchronization.</li>
+                <li>Integrated Objective-C, OpenCV and AVFoundation for Verideal’s V-CODE scanner.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="role">
+            <div class="role-meta"><strong>FrizHub</strong>May 2019 — Aug 2020<br>Lahore, Pakistan</div>
+            <div>
+              <h3>iOS Developer / Mobile App Developer</h3>
+              <p>Delivered health-tech, social and legal-tech iOS products.</p>
+              <ul>
+                <li>Integrated Twilio video consultations and real-time doctor-patient communication for Hyphen.</li>
+                <li>Built Socket.IO/WebSocket chat and live comments for Bublle.</li>
+                <li>Delivered Realm-backed offline workflows and mentored 2 junior developers.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="shell reveal">
+        <div class="section-head">
+          <p class="eyebrow">04 / Selected work</p>
+          <div>
+            <h2>Projects that show the engineering, not just the UI.</h2>
+            <p class="section-intro">The strongest work comes first: camera/media systems, established production products and cross-platform native integrations.</p>
+          </div>
+        </div>
+
+        <div class="featured-grid">
+          <article class="project-card">
+            <div class="project-visual opic-visual">
+              <span class="visual-label">OPIC camera UI concept</span>
+              <img src="assets/opic-camera-ui.webp" width="720" height="1556" alt="Annotated OPIC camera interface showing capture mode, camera hardware, zoom, focus and recording style controls" loading="lazy" decoding="async">
+            </div>
+            <div class="project-body">
+              <div class="project-topline"><span>Spatial camera & streaming</span><span>2025 — Present</span></div>
+              <h3>OPIC3D</h3>
+              <p>Production spatial-camera platform spanning standard/spatial capture, stereoscopic processing, camera controls, transcoding and LiveKit-powered streaming.</p>
+              <div class="tags" style="margin-top:16px"><span class="tag">Swift</span><span class="tag">SwiftUI</span><span class="tag">UIKit</span><span class="tag">AVFoundation</span><span class="tag">LiveKit</span></div>
+              <div class="project-links">
+                <a class="text-link" href="#case-opic">Read case study</a>
+                <a class="text-link" href="https://apps.apple.com/us/app/opic3d-spatial-videos-reels/id6750488011" target="_blank" rel="noopener">App Store ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual systems-visual">
+              <span class="visual-label">Video coaching platform</span>
+              <div class="system-map" aria-label="Sibme engineering system map">
+                <div class="system-stack">
+                  <div class="system-node"><strong>iOS client</strong>Files · forms · audio</div>
+                  <div class="system-node"><strong>Media</strong>Playback · background audio</div>
+                  <div class="system-node"><strong>Release</strong>TestFlight · Fastlane</div>
+                </div>
+                <div class="system-arrow" aria-hidden="true">→</div>
+                <div class="system-stack">
+                  <div class="system-node"><strong>Product workflows</strong>Coaching · AI-assisted forms</div>
+                  <div class="system-node"><strong>Production support</strong>Debugging · regression fixes</div>
+                  <div class="system-node"><strong>Delivery</strong>Weekly release cadence</div>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-topline"><span>Coaching & education</span><span>2022 — 2025</span></div>
+              <h3>Sibme</h3>
+              <p>An established video-coaching SaaS product where I delivered 10+ major features, media-pipeline work, production fixes and release automation.</p>
+              <div class="tags" style="margin-top:16px"><span class="tag">Swift</span><span class="tag">UIKit</span><span class="tag">AVFoundation</span><span class="tag">Fastlane</span></div>
+              <div class="project-links">
+                <a class="text-link" href="#case-sibme">Read case study</a>
+                <a class="text-link" href="https://apps.apple.com/us/app/sibme/id629939151" target="_blank" rel="noopener">App Store ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual">
+              <span class="visual-label">Native iOS inside React Native</span>
+              <div class="device" aria-hidden="true"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-topline"><span>Fitness</span><span>Native bridge</span></div>
+              <h3>Mr. Rebounder</h3>
+              <p>Built the native iOS module and React Native bridge supporting 3D exercise experiences, workout timers and communication between cross-platform and Swift layers.</p>
+              <div class="tags" style="margin-top:16px"><span class="tag">React Native</span><span class="tag">Swift</span><span class="tag">Native Modules</span></div>
+              <div class="project-links"><a class="text-link" href="#case-rebounder">Read case study</a></div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual systems-visual">
+              <span class="visual-label">Telemedicine · real-time communication</span>
+              <div class="system-map" aria-label="Hyphen telemedicine system map">
+                <div class="system-stack">
+                  <div class="system-node"><strong>Patient</strong>OTP · chat · call</div>
+                  <div class="system-node"><strong>iOS</strong>Async API coordination</div>
+                </div>
+                <div class="system-arrow" aria-hidden="true">↔</div>
+                <div class="system-stack">
+                  <div class="system-node"><strong>Twilio</strong>Video consultation</div>
+                  <div class="system-node"><strong>Backend</strong>Notifications · APIs</div>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-topline"><span>Health-tech</span><span>2020</span></div>
+              <h3>Hyphen</h3>
+              <p>Telemedicine workflows combining Twilio-powered video consultations, doctor-patient chat, OTP authentication, notifications and asynchronous API coordination.</p>
+              <div class="tags" style="margin-top:16px"><span class="tag">Swift</span><span class="tag">Twilio</span><span class="tag">GCD</span><span class="tag">Push Notifications</span></div>
+              <div class="project-links"><a class="text-link" href="#case-hyphen">Read case study</a></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="more-work" aria-label="Additional shipped projects">
+          <article class="mini-card"><h3>Lujo</h3><p>Sports and events-related iOS product work.</p><a class="text-link" href="https://apps.apple.com/us/app/lujo/id1233843327" target="_blank" rel="noopener">App Store ↗</a></article>
+          <article class="mini-card"><h3>Weeks</h3><p>Habit tracker; sole iOS ownership of core UI/data flows and Firestore synchronization.</p><a class="text-link" href="https://apps.apple.com/us/app/weeks-simple-habit-tracker/id1548275058" target="_blank" rel="noopener">App Store ↗</a></article>
+          <article class="mini-card"><h3>Tap for Joy</h3><p>Wellness product with audio/video playback, premium content access and production feature work.</p><a class="text-link" href="https://apps.apple.com/in/app/tap-for-joy/id1544910871" target="_blank" rel="noopener">App Store ↗</a></article>
+          <article class="mini-card"><h3>Verideal</h3><p>Marketplace/backend integration plus V-CODE scanning work using Objective-C, OpenCV and AVFoundation.</p><a class="text-link" href="https://apps.apple.com/pk/app/verideal/id1628758614" target="_blank" rel="noopener">App Store ↗</a></article>
+          <article class="mini-card"><h3>Stonks Trading</h3><p>Fintech product covering authentication, portfolio workflows, crypto/fiat flows and banking integration.</p></article>
+          <article class="mini-card"><h3>Bublle / Wakeel Online</h3><p>Real-time social features with Socket.IO and backend-driven legal-tech forms, attachments and notifications.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="cases">
+      <div class="shell reveal">
+        <div class="section-head">
+          <p class="eyebrow">05 / Case studies</p>
+          <div>
+            <h2>How I approach difficult product work.</h2>
+            <p class="section-intro">Focused on the actual constraint, implementation and outcome — without inventing metrics where none are available.</p>
+          </div>
+        </div>
+
+        <div class="case-studies">
+          <article class="case" id="case-opic">
+            <div>
+              <span class="case-index">Case 01 · OPIC3D</span>
+              <h3>Building a spatial camera and live-streaming system without destabilizing existing capture flows.</h3>
+              <p class="case-summary">Lead iOS development across camera architecture, spatial media, LiveKit streaming and production performance.</p>
+              <div class="metric"><strong>≈40%</strong><span>reduction in media-processing latency through capture-session and transcoding refactoring.</span></div>
+            </div>
+            <div class="case-grid">
+              <div class="case-block"><h4>Product</h4><p>A spatial camera and live-streaming platform designed around photo/video capture, 3D media and real-time sharing.</p></div>
+              <div class="case-block"><h4>Role</h4><p>Lead iOS Developer / Senior iOS Developer, leading a team of 3 iOS engineers.</p></div>
+              <div class="case-block"><h4>Challenge</h4><p>Coordinate capture formats, preview state, stereoscopic processing and streaming while keeping mode changes reliable across devices.</p></div>
+              <div class="case-block"><h4>Solution</h4><p>Built and refactored AVFoundation capture flows, spatial left/right processing, camera controls, transcoding and LiveKit-backed live workflows with maintainable state boundaries.</p></div>
+              <div class="case-block"><h4>Technology</h4><p>Swift, SwiftUI, UIKit, AVFoundation, LiveKit, REST APIs, Firebase Cloud Functions, MVVM and Clean Architecture.</p></div>
+              <div class="case-block"><h4>Impact</h4><p>Lower processing latency, more reliable media workflows and a production foundation for standard, spatial and live camera experiences.</p></div>
+            </div>
+          </article>
+
+          <article class="case" id="case-sibme">
+            <div>
+              <span class="case-index">Case 02 · Sibme</span>
+              <h3>Shipping meaningful features inside an established video-coaching product.</h3>
+              <p class="case-summary">Feature ownership, media performance, production debugging and release automation in a mature iOS codebase.</p>
+              <div class="metric"><strong>30%</strong><span>less video buffering after AVFoundation media-pipeline refactoring.</span></div>
+            </div>
+            <div class="case-grid">
+              <div class="case-block"><h4>Product</h4><p>A video-coaching and collaboration platform used for reflection, feedback and coaching workflows.</p></div>
+              <div class="case-block"><h4>Role</h4><p>Senior iOS Engineer, one of 4 iOS engineers working in an established production application.</p></div>
+              <div class="case-block"><h4>Challenge</h4><p>Add new workflows while protecting existing product behavior and improving media reliability in a long-lived codebase.</p></div>
+              <div class="case-block"><h4>Solution</h4><p>Delivered 10+ major features, including file/folder flows, audio recording, background audio and AI-assisted forms; refactored media pipelines and handled production issues.</p></div>
+              <div class="case-block"><h4>Technology</h4><p>Swift, UIKit, AVFoundation, REST APIs, MVVM, Fastlane, TestFlight and App Store delivery.</p></div>
+              <div class="case-block"><h4>Impact</h4><p>Improved playback reliability and reduced manual release effort by 50%, helping move the product from bi-weekly to weekly releases.</p></div>
+            </div>
+          </article>
+
+          <article class="case" id="case-rebounder">
+            <div>
+              <span class="case-index">Case 03 · Mr. Rebounder</span>
+              <h3>Bridging React Native with native iOS for platform-specific fitness workflows.</h3>
+              <p class="case-summary">A focused native integration where cross-platform UI needed deeper iOS capability.</p>
+            </div>
+            <div class="case-grid">
+              <div class="case-block"><h4>Product</h4><p>A fitness application with 3D exercise experiences and timer-based workout flows.</p></div>
+              <div class="case-block"><h4>Role</h4><p>Senior mobile/iOS engineer responsible for the native iOS module and React Native bridge.</p></div>
+              <div class="case-block"><h4>Challenge</h4><p>Expose native Swift behavior cleanly to the React Native layer without duplicating product logic.</p></div>
+              <div class="case-block"><h4>Solution</h4><p>Implemented the native module and bridge used for 3D exercise and timer flows, defining communication between cross-platform and native layers.</p></div>
+              <div class="case-block"><h4>Technology</h4><p>React Native, Swift and native iOS modules/bridging.</p></div>
+              <div class="case-block"><h4>Impact</h4><p>Enabled the cross-platform product to use iOS-specific implementation where native capability was required.</p></div>
+            </div>
+          </article>
+
+          <article class="case" id="case-hyphen">
+            <div>
+              <span class="case-index">Case 04 · Hyphen</span>
+              <h3>Real-time telemedicine flows across video, chat, authentication and backend coordination.</h3>
+              <p class="case-summary">A production health-tech integration where reliability and asynchronous state mattered.</p>
+            </div>
+            <div class="case-grid">
+              <div class="case-block"><h4>Product</h4><p>A telemedicine application supporting remote doctor-patient communication.</p></div>
+              <div class="case-block"><h4>Role</h4><p>iOS developer delivering real-time communication and product workflows.</p></div>
+              <div class="case-block"><h4>Challenge</h4><p>Coordinate video consultations, chat, OTP flows, notifications and multiple asynchronous backend calls.</p></div>
+              <div class="case-block"><h4>Solution</h4><p>Integrated Twilio video, doctor-patient chat, OTP authentication and push flows, using GCD to coordinate asynchronous API work.</p></div>
+              <div class="case-block"><h4>Technology</h4><p>Swift, UIKit, Twilio, GCD, REST APIs and push notifications.</p></div>
+              <div class="case-block"><h4>Impact</h4><p>Delivered the real-time iOS workflows required for remote consultation and communication without claiming unverified usage metrics.</p></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="shell reveal">
+        <p class="eyebrow" style="margin-bottom:16px">06 / Contact</p>
+        <h2>Need senior iOS help on a difficult mobile product?</h2>
+        <p>
+          I’m open to remote Senior iOS Engineer roles and selected contract work,
+          especially around camera, video, streaming, real-time communication and complex native iOS features.
+        </p>
+        <div class="contact-actions">
+          <a class="btn primary" href="mailto:bazil@bazilhassan.com">bazil@bazilhassan.com ↗</a>
+          <a class="btn" href="https://www.linkedin.com/in/bazil-hassan/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a class="btn" href="https://github.com/bazilhassan" target="_blank" rel="noopener">GitHub ↗</a>
+          <a class="btn" href="assets/Bazil-Hassan-Resume.pdf" target="_blank" rel="noopener">Résumé ↗</a>
+        </div>
+        <div class="contact-note">Lahore, Pakistan · Available for international remote collaboration</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-row">
+      <span>© <span id="year"></span> Bazil Hassan · Senior iOS Engineer</span>
+      <div class="footer-links">
+        <a href="#top">Back to top ↑</a>
+        <a href="mailto:bazil@bazilhassan.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const root = document.documentElement;
+      const toggle = document.getElementById('themeToggle');
+      const icon = document.getElementById('themeIcon');
+      const stored = localStorage.getItem('theme');
+
+      if (stored === 'light' || stored === 'dark') root.dataset.theme = stored;
+
+      const updateThemeUI = () => {
+        const explicit = root.dataset.theme;
+        const dark = explicit === 'dark' || (explicit === 'system' && matchMedia('(prefers-color-scheme: dark)').matches);
+        icon.textContent = dark ? '☀︎' : '◐';
+        toggle.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
+        toggle.title = dark ? 'Switch to light theme' : 'Switch to dark theme';
+      };
+
+      toggle.addEventListener('click', () => {
+        const darkNow = root.dataset.theme === 'dark' || (root.dataset.theme === 'system' && matchMedia('(prefers-color-scheme: dark)').matches);
+        root.dataset.theme = darkNow ? 'light' : 'dark';
+        localStorage.setItem('theme', root.dataset.theme);
+        updateThemeUI();
+      });
+
+      matchMedia('(prefers-color-scheme: dark)').addEventListener?.('change', updateThemeUI);
+      updateThemeUI();
+
+      const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const reveals = document.querySelectorAll('.reveal');
+      if (reduced || !('IntersectionObserver' in window)) {
+        reveals.forEach(el => el.classList.add('is-visible'));
+      } else {
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.08 });
+        reveals.forEach(el => observer.observe(el));
+      }
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
