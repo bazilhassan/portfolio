@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bazil Hassan — Senior iOS Engineer | Camera, Real-Time Video, Spatial Media</title>
-<meta name="description" content="Senior iOS engineer with 6+ years building production camera, live streaming and spatial media apps. Swift, SwiftUI, AVFoundation, WebRTC, LiveKit. Available for remote roles and contract work.">
+<title>Bazil Hassan — Senior iOS Engineer | Swift, SwiftUI &amp; Real-Time Media</title>
+<meta name="description" content="Senior iOS engineer with 8+ years building production applications across spatial media, education, fitness, telemedicine and consumer products. Swift, SwiftUI, UIKit, AVFoundation, LiveKit and WebRTC.">
 <meta name="author" content="Bazil Hassan">
 <meta name="theme-color" content="#F7F7F4">
 <link rel="canonical" href="https://bazilhassan.com/">
@@ -12,18 +12,25 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://bazilhassan.com/">
 <meta property="og:title" content="Bazil Hassan — Senior iOS Engineer">
-<meta property="og:description" content="I build iOS apps where the camera and the network are the hard part. Swift, AVFoundation, WebRTC, LiveKit, spatial video.">
+<meta property="og:description" content="I build reliable iOS products—from polished interfaces to real-time camera and streaming systems.">
 <meta property="og:image" content="https://bazilhassan.com/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Bazil Hassan — Senior iOS Engineer">
-<meta name="twitter:description" content="I build iOS apps where the camera and the network are the hard part.">
+<meta name="twitter:description" content="Senior iOS engineer building reliable products with Swift, SwiftUI, UIKit and AVFoundation.">
 <meta name="twitter:image" content="https://bazilhassan.com/og-image.png">
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2317191D'/%3E%3Cpath d='M8 8h5M8 8v5M24 8h-5M24 8v5M8 24h5M8 24v-5M24 24h-5M24 24v-5' stroke='%23E0A422' stroke-width='2.2' fill='none' stroke-linecap='square'/%3E%3Ccircle cx='16' cy='16' r='3.4' fill='%23E0A422'/%3E%3C/svg%3E">
+<script>
+(function(){
+  var preferred = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  try{
+    document.documentElement.dataset.theme = localStorage.getItem('portfolio-theme') || preferred;
+  }catch(error){
+    document.documentElement.dataset.theme = preferred;
+  }
+})();
+</script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2317191D'/%3E%3Cpath d='M8 8h5M8 8v5M24 8h-5M24 8v5M8 24h5M8 24v-5M24 24h-5M24 24v-5' stroke='%23E0A422' stroke-width='2.2' fill='none' stroke-linecap='square'/%3E%3Ccircle cx='16' cy='16' r='3.4' fill='%23E0A422'/%3E%3C/svg%3E">
 
 <script type="application/ld+json">
 {
@@ -33,231 +40,229 @@
   "jobTitle": "Senior iOS Engineer",
   "url": "https://bazilhassan.com/",
   "email": "mailto:bazil@bazilhassan.com",
-  "description": "Senior iOS engineer specialising in camera systems, real-time video and spatial media.",
-  "knowsAbout": ["iOS Development","Swift","SwiftUI","UIKit","AVFoundation","WebRTC","LiveKit","Spatial Video","Clean Architecture","React Native"],
-  "sameAs": [
-    "https://www.linkedin.com/in/bazil-hassan/",
-    "https://github.com/bazilhassan"
-  ]
+  "address": {"@type":"PostalAddress","addressLocality":"Lahore","addressCountry":"PK"},
+  "description": "Senior iOS engineer with 8+ years building production applications across media, education, fitness, telemedicine and consumer products.",
+  "alumniOf": {"@type":"CollegeOrUniversity","name":"University of Sargodha"},
+  "knowsLanguage": ["Urdu","English"],
+  "knowsAbout": ["iOS Development","Swift","SwiftUI","UIKit","Objective-C","AVFoundation","Spatial Video","WebRTC","LiveKit","Clean Architecture","React Native","visionOS"],
+  "sameAs": ["https://www.linkedin.com/in/bazil-hassan/","https://github.com/bazilhassan"]
 }
 </script>
 
 <style>
 :root{
-  --paper:#F7F7F4;
-  --card:#FFFFFF;
-  --ink:#17191D;
-  --muted:#6B7178;
-  --line:#E2E2DC;
-  --accent:#E0A422;
-  --accent-deep:#966A08;
-  --shadow:0 1px 2px rgba(23,25,29,.04), 0 8px 24px rgba(23,25,29,.05);
+  color-scheme:light;
+  --paper:#F5F3EE;--card:#FCFBF8;--ink:#151719;--muted:#686D73;--body:#3C4149;
+  --line:#DDDAD2;--accent:#D69A24;--accent-deep:#77530A;
+  --soft:#ECE8DF;--surface:#EFEBE3;
+  --shadow:0 1px 2px rgba(21,23,25,.04),0 16px 46px rgba(21,23,25,.07);
   --maxw:1080px;
-  --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
-  --display:'Archivo',var(--sans);
-  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --sans:-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',sans-serif;
+  --display:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',sans-serif;
+  --mono:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;
 }
-
+[data-theme="dark"]{
+  color-scheme:dark;
+  --paper:#111315;--card:#181B1E;--ink:#F5F2EA;--muted:#A7ABB0;--body:#CED1D4;
+  --line:#2B2F33;--accent:#E4AC3D;--accent-deep:#F0C56D;
+  --soft:#23272B;--surface:#202428;
+  --shadow:0 18px 54px rgba(0,0,0,.28);
+}
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{
-  margin:0;background:var(--paper);color:var(--ink);
-  font-family:var(--sans);font-size:16.5px;line-height:1.65;
-  -webkit-font-smoothing:antialiased;
-}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
+  font-size:16.5px;line-height:1.65;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{color:inherit}
+code{font-family:var(--mono);font-size:.9em;background:var(--surface);padding:1px 5px;border-radius:4px}
 
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
 .band{padding:92px 0;border-top:1px solid var(--line)}
 .band--plain{border-top:none}
 
-/* ---------- type ---------- */
 h1,h2,h3,h4{font-family:var(--display);font-weight:600;letter-spacing:-.021em;margin:0;line-height:1.14}
 h1{font-size:clamp(2.3rem,5.6vw,3.85rem);letter-spacing:-.032em}
 h2{font-size:clamp(1.65rem,3.4vw,2.35rem);letter-spacing:-.026em}
 h3{font-size:1.2rem;letter-spacing:-.016em}
 p{margin:0 0 1.05em}
-.lede{font-size:clamp(1.02rem,1.9vw,1.18rem);color:#3C4149;max-width:60ch}
-.muted{color:var(--muted)}
+.lede{font-size:clamp(1.02rem,1.9vw,1.18rem);color:var(--body);max-width:60ch}
 
-.eyebrow{
-  font-family:var(--mono);font-size:.685rem;font-weight:500;
-  letter-spacing:.16em;text-transform:uppercase;color:var(--accent-deep);
-  display:flex;align-items:center;gap:11px;margin:0 0 22px;
-}
+.eyebrow{font-family:var(--mono);font-size:.685rem;font-weight:500;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--accent-deep);display:flex;align-items:center;gap:11px;margin:0 0 22px}
 .eyebrow::after{content:"";flex:1;height:1px;background:var(--line)}
 
-/* ---------- nav ---------- */
-.nav{
-  position:sticky;top:0;z-index:50;
-  background:rgba(247,247,244,.87);backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--line);
-}
+.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 88%,transparent);
+  backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .nav__in{max-width:var(--maxw);margin:0 auto;padding:0 24px;height:62px;
   display:flex;align-items:center;justify-content:space-between;gap:20px}
 .brand{font-family:var(--display);font-weight:700;font-size:1.02rem;letter-spacing:-.02em;text-decoration:none}
 .brand span{color:var(--accent)}
-.nav__links{display:flex;gap:28px;align-items:center}
-.nav__links a{
-  font-size:.875rem;font-weight:500;color:var(--muted);text-decoration:none;
-  padding:4px 0;border-bottom:1.5px solid transparent;transition:color .16s,border-color .16s;
-}
+.nav__links{display:flex;gap:24px;align-items:center}
+.nav__links a{font-size:.875rem;font-weight:500;color:var(--muted);text-decoration:none;
+  padding:4px 0;border-bottom:1.5px solid transparent;transition:color .16s,border-color .16s}
 .nav__links a:hover,.nav__links a:focus-visible{color:var(--ink);border-bottom-color:var(--accent)}
-@media(max-width:760px){.nav__links{display:none}}
+.nav__actions{display:flex;align-items:center;gap:10px}
+.theme-toggle{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--card);
+  color:var(--ink);font-family:var(--mono);font-size:.72rem;cursor:pointer;transition:border-color .16s,transform .16s}
+.theme-toggle:hover{border-color:var(--ink);transform:rotate(6deg)}
+.mobile-menu{display:none;position:relative}
+.mobile-menu summary{list-style:none;width:40px;height:40px;border:1px solid var(--line);border-radius:50%;
+  display:grid;place-items:center;background:var(--card);cursor:pointer;font-family:var(--mono);font-size:.7rem}
+.mobile-menu summary::-webkit-details-marker{display:none}
+.mobile-menu__panel{position:absolute;right:0;top:48px;min-width:210px;background:var(--card);border:1px solid var(--line);
+  box-shadow:var(--shadow);border-radius:12px;padding:10px;display:grid;gap:2px}
+.mobile-menu__panel a{padding:10px 12px;text-decoration:none;border-radius:7px;font-size:.9rem}
+.mobile-menu__panel a:hover{background:var(--surface)}
+@media(max-width:900px){.nav__links{display:none}.mobile-menu{display:block}.nav__actions>.btn{display:none}}
 
-/* ---------- buttons ---------- */
-.btn{
-  display:inline-flex;align-items:center;gap:8px;
-  font-family:var(--sans);font-size:.9rem;font-weight:600;text-decoration:none;
-  padding:11px 20px;border-radius:7px;border:1px solid var(--ink);
-  background:var(--ink);color:#fff;transition:transform .16s,box-shadow .16s,background .16s;
-}
+.btn{display:inline-flex;align-items:center;gap:8px;font-size:.9rem;font-weight:600;
+  text-decoration:none;padding:11px 20px;border-radius:7px;border:1px solid var(--ink);
+  background:var(--ink);color:var(--paper);transition:transform .16s,box-shadow .16s}
 .btn:hover{transform:translateY(-1.5px);box-shadow:0 6px 18px rgba(23,25,29,.16)}
 .btn--ghost{background:transparent;color:var(--ink);border-color:var(--line)}
 .btn--ghost:hover{border-color:var(--ink);box-shadow:none}
 .btn-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
 
-/* ---------- hero ---------- */
-.hero{padding:104px 0 88px;position:relative;overflow:hidden}
-.status{
-  display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);
-  font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);
-  border:1px solid var(--line);background:var(--card);border-radius:100px;padding:6px 14px;margin-bottom:30px;
-}
+.hero{padding:96px 0 82px;position:relative;overflow:hidden}
+.hero__grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(300px,.7fr);gap:72px;align-items:center}
+.hero__content{position:relative;z-index:1}
+.status{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:.72rem;
+  letter-spacing:.09em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);
+  background:var(--card);border-radius:100px;padding:6px 14px;margin-bottom:30px}
 .dot{width:6px;height:6px;border-radius:50%;background:#2FA36B;box-shadow:0 0 0 3px rgba(47,163,107,.15)}
-.hero h1{max-width:17ch}
+.hero h1{max-width:16ch}
 .hero .lede{margin-top:24px}
-.hero__meta{
-  margin-top:44px;padding-top:22px;border-top:1px solid var(--line);
-  font-family:var(--mono);font-size:.75rem;color:var(--muted);
-  display:flex;flex-wrap:wrap;gap:10px 26px;
-}
-
-/* signature: focus reticle */
-.reticle{
-  position:absolute;top:96px;right:-40px;width:340px;height:340px;
-  pointer-events:none;opacity:.5;
-}
+.hero__meta{margin-top:44px;padding-top:22px;border-top:1px solid var(--line);
+  font-family:var(--mono);font-size:.75rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:10px 26px}
+.hero__panel{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);
+  position:relative;overflow:hidden}
+.hero__panel::before{content:"";position:absolute;top:0;left:25px;width:58px;height:3px;background:var(--accent);z-index:3}
+.hero__portrait{margin:0;position:relative;aspect-ratio:1/1.02;background:var(--surface);border-bottom:1px solid var(--line);overflow:hidden}
+.hero__portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 38%;filter:saturate(.92) contrast(1.02)}
+.hero__portrait figcaption{position:absolute;left:16px;bottom:16px;background:rgba(21,23,25,.9);color:#F5F3EE;
+  border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:9px 12px;box-shadow:0 8px 24px rgba(0,0,0,.16)}
+.hero__portrait figcaption b{display:block;font-family:var(--display);font-size:.88rem;letter-spacing:-.01em}
+.hero__portrait figcaption span{display:block;margin-top:2px;font-family:var(--mono);font-size:.62rem;letter-spacing:.07em;text-transform:uppercase;color:#C8CDD3}
+.hero__panel-body{padding:24px 26px 26px}
+.hero__panel-label{font-family:var(--mono);font-size:.68rem;text-transform:uppercase;letter-spacing:.13em;color:var(--accent-deep);margin-bottom:20px}
+.hero__panel dl{margin:0}
+.hero__panel dl>div{display:grid;grid-template-columns:92px 1fr;gap:16px;padding:13px 0;border-top:1px solid var(--line)}
+.hero__panel dt{font-family:var(--mono);font-size:.68rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
+.hero__panel dd{margin:0;font-size:.9rem;font-weight:500}
+.reticle{position:absolute;top:96px;right:-40px;width:340px;height:340px;pointer-events:none;opacity:.35}
 .reticle span{position:absolute;width:34px;height:34px;border:2px solid var(--accent)}
 .reticle span:nth-child(1){top:0;left:0;border-right:0;border-bottom:0}
 .reticle span:nth-child(2){top:0;right:0;border-left:0;border-bottom:0}
 .reticle span:nth-child(3){bottom:0;left:0;border-right:0;border-top:0}
 .reticle span:nth-child(4){bottom:0;right:0;border-left:0;border-top:0}
-@media(max-width:1000px){.reticle{display:none}}
+@media(max-width:920px){
+  .hero__grid{grid-template-columns:1fr;gap:44px}.hero__panel{max-width:680px;display:grid;grid-template-columns:minmax(220px,.8fr) minmax(0,1.2fr)}
+  .hero__portrait{aspect-ratio:auto;height:100%;border-bottom:0;border-right:1px solid var(--line)}.reticle{display:none}
+}
+@media(max-width:620px){
+  .hero__panel{display:block;max-width:100%}.hero__portrait{aspect-ratio:1.2/1;height:auto;border-right:0;border-bottom:1px solid var(--line)}
+}
 
-/* ---------- about ---------- */
 .about{display:grid;grid-template-columns:1.35fr .85fr;gap:56px;align-items:start}
 @media(max-width:820px){.about{grid-template-columns:1fr;gap:34px}}
-.factlist{border-top:1px solid var(--line)}
-.factlist div{
-  display:flex;justify-content:space-between;gap:18px;padding:13px 0;
-  border-bottom:1px solid var(--line);font-size:.9rem;
-}
+.factlist{border-top:1px solid var(--line);margin:0}
+.factlist div{display:flex;justify-content:space-between;gap:18px;padding:13px 0;
+  border-bottom:1px solid var(--line);font-size:.9rem}
 .factlist dt{font-family:var(--mono);font-size:.73rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
 .factlist dd{margin:0;font-weight:500;text-align:right}
 
-/* ---------- skills ---------- */
-.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:2px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:2px;
+  background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
 .skill{background:var(--card);padding:24px 22px}
-.skill h3{font-size:.79rem;font-family:var(--mono);font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:13px}
+.skill h3{font-size:.79rem;font-family:var(--mono);font-weight:500;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--accent-deep);margin-bottom:13px}
 .skill ul{margin:0;padding:0;list-style:none}
-.skill li{font-size:.905rem;padding:3.5px 0;color:#3C4149}
+.skill li{font-size:.905rem;padding:3.5px 0;color:var(--body)}
 
-/* ---------- experience ---------- */
-.role{
-  display:grid;grid-template-columns:180px 1fr;gap:34px;
-  padding:30px 0;border-top:1px solid var(--line);
-}
+.role{display:grid;grid-template-columns:190px 1fr;gap:34px;padding:30px 0;border-top:1px solid var(--line)}
 .role:last-child{border-bottom:1px solid var(--line)}
-.role__when{font-family:var(--mono);font-size:.775rem;color:var(--muted);letter-spacing:.02em;padding-top:4px}
+.role__when{font-family:var(--mono);font-size:.775rem;color:var(--muted);padding-top:4px}
+.role__when b{display:block;color:var(--ink);font-weight:500;margin-bottom:3px}
 .role h3{margin-bottom:3px}
 .role__org{font-size:.905rem;color:var(--muted);margin-bottom:14px}
 .role ul{margin:0;padding-left:19px}
-.role li{margin-bottom:7px;color:#3C4149;font-size:.945rem}
+.role li{margin-bottom:7px;color:var(--body);font-size:.945rem}
 @media(max-width:700px){.role{grid-template-columns:1fr;gap:12px}}
 
-/* ---------- projects ---------- */
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 @media(max-width:800px){.grid2{grid-template-columns:1fr}}
-.proj{
-  background:var(--card);border:1px solid var(--line);border-radius:11px;
-  padding:28px 26px;display:flex;flex-direction:column;
-  transition:border-color .18s,box-shadow .18s,transform .18s;
-}
+.proj{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:28px 26px;
+  display:flex;flex-direction:column;transition:border-color .18s,box-shadow .18s,transform .18s}
 .proj:hover{border-color:#CFCFC6;box-shadow:var(--shadow);transform:translateY(-2px)}
-.proj__tag{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:12px}
+.proj__tag{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--accent-deep);margin-bottom:12px}
 .proj h3{margin-bottom:10px}
-.proj p{font-size:.935rem;color:#3C4149;margin-bottom:18px}
-.spec{
-  margin-top:auto;padding-top:16px;border-top:1px dashed var(--line);
-  font-family:var(--mono);font-size:.715rem;color:var(--muted);line-height:1.9;
-}
-.proj__link{
-  display:inline-flex;align-items:center;gap:6px;margin-top:16px;
-  font-size:.85rem;font-weight:600;text-decoration:none;color:var(--ink);
-  border-bottom:1.5px solid var(--accent);padding-bottom:1px;align-self:flex-start;
-}
+.proj p{font-size:.935rem;color:var(--body);margin-bottom:18px}
+.spec{margin-top:auto;padding-top:16px;border-top:1px dashed var(--line);
+  font-family:var(--mono);font-size:.715rem;color:var(--muted);line-height:1.9}
+.proj__link{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:.85rem;
+  font-weight:600;text-decoration:none;color:var(--ink);border-bottom:1.5px solid var(--accent);
+  padding-bottom:1px;align-self:flex-start}
 .proj__link:hover{color:var(--accent-deep)}
 
-/* ---------- case study ---------- */
-.case{
-  background:var(--card);border:1px solid var(--line);border-radius:12px;
-  padding:40px 38px;margin-bottom:26px;position:relative;
-}
-.case::before{
-  content:"";position:absolute;top:-1px;left:26px;width:52px;height:3px;background:var(--accent);border-radius:0 0 2px 2px;
-}
+.case{background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:40px 38px;margin-bottom:26px;position:relative}
+.case::before{content:"";position:absolute;top:-1px;left:26px;width:52px;height:3px;
+  background:var(--accent);border-radius:0 0 2px 2px}
 @media(max-width:640px){.case{padding:28px 22px}}
-.case__head{display:flex;flex-wrap:wrap;gap:14px;align-items:baseline;justify-content:space-between;margin-bottom:8px}
+.case__head{display:flex;flex-wrap:wrap;gap:14px;align-items:baseline;
+  justify-content:space-between;margin-bottom:8px}
 .case__kicker{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .case h2{font-size:clamp(1.4rem,2.6vw,1.85rem);margin-bottom:14px}
 .case__block{margin-top:26px}
-.case__block h4{
-  font-family:var(--mono);font-size:.735rem;font-weight:500;letter-spacing:.1em;
-  text-transform:uppercase;color:var(--accent-deep);margin-bottom:9px;
-}
-.case__block p,.case__block li{font-size:.95rem;color:#3C4149}
+.case__block h4{font-family:var(--mono);font-size:.735rem;font-weight:500;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--accent-deep);margin-bottom:9px}
+.case__block p,.case__block li{font-size:.95rem;color:var(--body)}
 .case__block ul{margin:0;padding-left:19px}
 .case__block li{margin-bottom:6px}
 .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:4px}
-.chip{
-  font-family:var(--mono);font-size:.715rem;color:#3C4149;
-  background:var(--paper);border:1px solid var(--line);border-radius:5px;padding:4px 9px;
-}
+.chip{font-family:var(--mono);font-size:.715rem;color:var(--body);background:var(--paper);
+  border:1px solid var(--line);border-radius:5px;padding:4px 9px}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:26px}
 @media(max-width:700px){.split{grid-template-columns:1fr}}
+.metrics{display:flex;flex-wrap:wrap;gap:22px;margin-top:6px}
+.metric{border-left:2px solid var(--accent);padding-left:13px}
+.metric b{display:block;font-family:var(--display);font-size:1.5rem;letter-spacing:-.03em;line-height:1.1}
+.metric span{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 
-/* ---------- why ---------- */
 .why{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:24px}
 .why__item{padding-top:18px;border-top:2px solid var(--ink)}
 .why__item h3{font-size:1.02rem;margin-bottom:8px}
-.why__item p{font-size:.925rem;color:#3C4149;margin:0}
+.why__item p{font-size:.925rem;color:var(--body);margin:0}
 
-/* ---------- contact ---------- */
-.contact{background:var(--ink);color:#F2F2EE;border-radius:14px;padding:52px 44px;margin-bottom:70px}
-.contact h2{color:#fff;max-width:18ch}
-.contact .lede{color:#B8BDC4}
+.contact{background:#151719;color:#F5F3EE;border:1px solid #2C3035;border-radius:16px;
+  padding:48px;margin-bottom:70px;box-shadow:0 22px 60px rgba(0,0,0,.16)}
+.contact__grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(310px,.85fr);gap:64px;align-items:end}
+.contact h2{color:#F5F3EE;max-width:18ch}
+.contact .lede{color:#C4C8CE;max-width:58ch;margin-bottom:0}
+.contact .eyebrow{color:var(--accent)}
+.contact .eyebrow::after{background:#2C3037}
+.contact__actions{display:grid;gap:12px}
+.contact__actions>.btn{width:100%;justify-content:center;padding:13px 18px}
+.contact__links{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.contact__links .btn{justify-content:center;padding:10px 12px;white-space:nowrap}
 .contact .btn{background:var(--accent);border-color:var(--accent);color:#17191D}
 .contact .btn:hover{box-shadow:0 6px 18px rgba(224,164,34,.3)}
 .contact .btn--ghost{background:transparent;color:#F2F2EE;border-color:#3A3E45}
-.contact .btn--ghost:hover{border-color:#F2F2EE}
-.contact__meta{margin-top:34px;padding-top:22px;border-top:1px solid #2C3037;
-  font-family:var(--mono);font-size:.75rem;color:#8A9099;display:flex;flex-wrap:wrap;gap:9px 26px}
-@media(max-width:640px){.contact{padding:34px 24px}}
+.contact .btn--ghost:hover{border-color:#F2F2EE;background:#202328}
+.contact__meta{margin-top:34px;padding-top:22px;border-top:1px solid #2C3037;font-family:var(--mono);
+  font-size:.75rem;color:#A4AAB2;display:flex;flex-wrap:wrap;gap:9px 26px}
+@media(max-width:840px){.contact__grid{grid-template-columns:1fr;gap:34px}.contact__actions{max-width:560px}}
+@media(max-width:640px){.contact{padding:32px 22px}.contact__links{grid-template-columns:1fr}.contact__links .btn{width:100%}}
 
-/* ---------- footer ---------- */
-.foot{border-top:1px solid var(--line);padding:26px 0 40px;
-  display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;
-  font-family:var(--mono);font-size:.74rem;color:var(--muted)}
+.foot{border-top:1px solid var(--line);padding:26px 0 40px;display:flex;flex-wrap:wrap;gap:12px;
+  justify-content:space-between;font-family:var(--mono);font-size:.74rem;color:var(--muted)}
 .foot a{text-decoration:none}
 .foot a:hover{color:var(--ink)}
 
-/* ---------- a11y + motion ---------- */
-.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;padding:10px 16px;z-index:100;border-radius:0 0 6px 0}
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;padding:10px 16px;z-index:100}
 .skip:focus{left:0}
 :focus-visible{outline:2.5px solid var(--accent-deep);outline-offset:3px;border-radius:3px}
-
 .rise{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease}
 .rise.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){
@@ -282,223 +287,307 @@ p{margin:0 0 1.05em}
       <a href="#case-opic">Case studies</a>
       <a href="#contact">Contact</a>
     </div>
-    <a class="btn" href="#contact">Get in touch</a>
+    <div class="nav__actions">
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme">Dark</button>
+      <details class="mobile-menu">
+        <summary aria-label="Open navigation">Menu</summary>
+        <div class="mobile-menu__panel">
+          <a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a>
+          <a href="#work">Work</a><a href="#case-opic">Case studies</a><a href="#contact">Contact</a>
+        </div>
+      </details>
+      <a class="btn" href="#contact">Get in touch</a>
+    </div>
   </div>
 </nav>
 
 <main id="main">
 
-<!-- HERO -->
 <header class="hero" id="top">
   <div class="reticle" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
   <div class="wrap">
-    <p class="status"><span class="dot" aria-hidden="true"></span> Available for remote work</p>
-    <h1>I build iOS apps where the camera is the hard part.</h1>
-    <p class="lede">Senior iOS engineer, 6+ years. I work below the UI layer on capture pipelines, live streaming and spatial media — the parts of an app that are difficult to get right and expensive to get wrong.</p>
-    <div class="btn-row">
-      <a class="btn" href="#case-opic">Read a case study</a>
-      <a class="btn btn--ghost" href="/resume.pdf">Download résumé</a>
-      <a class="btn btn--ghost" href="https://www.linkedin.com/in/bazil-hassan/" target="_blank" rel="noopener">LinkedIn ↗</a>
-    </div>
-    <div class="hero__meta">
-      <span>Swift · SwiftUI · UIKit</span>
-      <span>AVFoundation · MV-HEVC</span>
-      <span>WebRTC · LiveKit</span>
-      <span>Remote · International teams</span>
+    <div class="hero__grid">
+      <div class="hero__content">
+        <p class="status"><span class="dot" aria-hidden="true"></span> Open to remote roles &amp; contract work</p>
+        <h1>I build reliable iOS products—from polished UI to real-time media.</h1>
+        <p class="lede">Senior iOS engineer with 8+ years of experience shipping production apps across spatial media, education, fitness, telemedicine and consumer products. I lead teams, work comfortably in established codebases, and take complex features from architecture through App Store release.</p>
+        <div class="btn-row">
+          <a class="btn" href="#case-opic">View case studies</a>
+          <a class="btn btn--ghost" href="resume.pdf">Download résumé</a>
+          <a class="btn btn--ghost" href="https://www.linkedin.com/in/bazil-hassan/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+        <div class="hero__meta">
+          <span>Swift · SwiftUI · UIKit</span>
+          <span>AVFoundation · Spatial media</span>
+          <span>LiveKit · WebRTC · Twilio</span>
+          <span>Lahore · Remote worldwide</span>
+        </div>
+      </div>
+      <aside class="hero__panel" aria-label="Professional summary">
+        <figure class="hero__portrait">
+          <img src="data:image/webp;base64,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" alt="Bazil Hassan, Senior iOS Engineer" width="720" height="720" decoding="async" fetchpriority="high">
+          <figcaption><b>Bazil Hassan</b><span>Senior iOS Engineer</span></figcaption>
+        </figure>
+        <div class="hero__panel-body">
+          <p class="hero__panel-label">Senior-level delivery</p>
+          <dl>
+            <div><dt>Experience</dt><dd>8+ years in production iOS</dd></div>
+            <div><dt>Leadership</dt><dd>Leading a team of 3 engineers</dd></div>
+            <div><dt>Strength</dt><dd>Complex media and real-time systems</dd></div>
+            <div><dt>Range</dt><dd>Health, education, fitness, fintech and media</dd></div>
+          </dl>
+        </div>
+      </aside>
     </div>
   </div>
 </header>
 
-<!-- ABOUT -->
 <section class="band" id="about">
   <div class="wrap">
     <p class="eyebrow">About</p>
     <div class="about">
       <div>
-        <h2>Most iOS work is CRUD. Mine isn't.</h2>
-        <p class="lede" style="margin-top:18px">Plenty of engineers can wire a REST API to a table view. Far fewer have shipped an app where <code>AVCaptureSession</code> has to survive a backgrounded app, a rotated device, a dropped network and a user tapping record at the wrong moment.</p>
-        <p>That's the work I've spent the last several years on: custom camera experiences, spatial photo and video capture, high frame-rate modes, and real-time streaming built on WebRTC and LiveKit. It's the layer where Apple's documentation runs out and you're reading capture-device capability tables to work out why one iPhone model behaves differently to another.</p>
-        <p>I've delivered this inside production apps with existing users, which means the constraint is never just "make it work" — it's "add this without breaking the camera that already ships." I'm comfortable owning that risk, writing the migration path, and being the person who explains the trade-off to a founder in plain language.</p>
-        <p>I work remotely with teams across the US, UK, EU and Australia, as an independent contractor or through platforms like Deel and Remote.</p>
+        <h2>Senior iOS engineering with uncommon depth.</h2>
+        <p class="lede" style="margin-top:18px">I build the full product layer: pixel-accurate interfaces, maintainable architecture, dependable networking, media pipelines and the release work required to put a reliable app in users' hands.</p>
+        <p>My deepest specialization is real-time and camera-driven software. At Uverse Digital, I lead three iOS engineers building OPIC3D—a spatial camera and live-streaming platform with multiple capture modes, stereoscopic media processing, custom focus and zoom, and LiveKit-powered streams with real-time audience interaction.</p>
+        <p>That specialization sits inside a broader product background. I have delivered features for Sibme's education and coaching platform, Mr. Rebounder's fitness workflows, Hyphen's telemedicine experience, Weeks' habit tracking, Verideal's OpenCV scanner, and social, legal-tech and consumer applications.</p>
+        <p>Most of my work has happened inside production codebases with existing users. I treat regression risk, maintainability and App Store delivery as part of the feature—not cleanup work for later.</p>
+        <p>I collaborate remotely across time zones and can contribute as a hands-on senior engineer, technical lead or independent iOS contractor.</p>
       </div>
       <dl class="factlist">
-        <div><dt>Role</dt><dd>Senior iOS Engineer</dd></div>
-        <div><dt>Experience</dt><dd>6+ years</dd></div>
-        <div><dt>Focus</dt><dd>Camera · Real-time video</dd></div>
-        <div><dt>Primary stack</dt><dd>Swift · AVFoundation</dd></div>
+        <div><dt>Current role</dt><dd>Lead iOS Developer</dd></div>
+        <div><dt>Company</dt><dd>Uverse Digital</dd></div>
+        <div><dt>Experience</dt><dd>8+ years</dd></div>
+        <div><dt>Focus</dt><dd>Product · Media · Real-time</dd></div>
+        <div><dt>Based in</dt><dd>Lahore, Pakistan</dd></div>
         <div><dt>Availability</dt><dd>Contract / Full-time</dd></div>
-        <div><dt>Working hours</dt><dd>Overlaps US &amp; EU</dd></div>
-        <div><dt>Engagement</dt><dd>Direct or via Deel</dd></div>
+        <div><dt>Education</dt><dd>BSCS, Univ. of Sargodha</dd></div>
+        <div><dt>Languages</dt><dd>English · Urdu</dd></div>
       </dl>
     </div>
   </div>
 </section>
 
-<!-- SKILLS -->
 <section class="band" id="skills">
   <div class="wrap">
     <p class="eyebrow">Technical skills</p>
     <h2 style="margin-bottom:34px">A native-first stack, weighted toward media.</h2>
     <div class="skills">
-      <div class="skill">
-        <h3>Languages &amp; UI</h3>
-        <ul><li>Swift</li><li>SwiftUI</li><li>UIKit</li><li>Objective-C</li></ul>
-      </div>
-      <div class="skill">
-        <h3>Camera &amp; media</h3>
-        <ul><li>AVFoundation</li><li>AVCaptureSession</li><li>MV-HEVC / spatial video</li><li>Core Image</li><li>High frame-rate capture</li></ul>
-      </div>
-      <div class="skill">
-        <h3>Real-time</h3>
-        <ul><li>WebRTC</li><li>LiveKit</li><li>Twilio</li><li>Live streaming pipelines</li></ul>
-      </div>
-      <div class="skill">
-        <h3>Architecture</h3>
-        <ul><li>Clean Architecture</li><li>MVVM</li><li>VIPER</li><li>SOLID principles</li><li>Modularisation</li></ul>
-      </div>
-      <div class="skill">
-        <h3>Data &amp; backend</h3>
-        <ul><li>Core Data</li><li>Realm</li><li>Firebase</li><li>REST / JSON</li></ul>
-      </div>
-      <div class="skill">
-        <h3>Graphics &amp; vision</h3>
-        <ul><li>ARKit</li><li>Vision</li><li>Core Image filters</li></ul>
-      </div>
-      <div class="skill">
-        <h3>Cross-platform</h3>
-        <ul><li>React Native</li><li>Native modules (iOS)</li><li>Bridging Swift ↔ JS</li></ul>
-      </div>
-      <div class="skill">
-        <h3>Delivery</h3>
-        <ul><li>Git · SPM · CocoaPods</li><li>TestFlight</li><li>App Store submission</li><li>Code review · Mentoring</li></ul>
-      </div>
+      <div class="skill"><h3>Languages &amp; UI</h3>
+        <ul><li>Swift</li><li>Objective-C</li><li>SwiftUI</li><li>UIKit</li><li>visionOS</li></ul></div>
+      <div class="skill"><h3>Camera &amp; media</h3>
+        <ul><li>AVFoundation</li><li>Custom camera pipelines</li><li>Spatial photo &amp; video</li><li>Stereoscopic capture</li><li>Video transcoding</li></ul></div>
+      <div class="skill"><h3>Real-time</h3>
+        <ul><li>LiveKit</li><li>WebRTC</li><li>Twilio</li><li>Socket.IO / WebSockets</li><li>Audio &amp; video playback</li></ul></div>
+      <div class="skill"><h3>Architecture</h3>
+        <ul><li>MVVM</li><li>VIPER</li><li>Clean Architecture</li><li>Modular feature design</li><li>Protocol-oriented design</li></ul></div>
+      <div class="skill"><h3>Concurrency</h3>
+        <ul><li>Combine</li><li>Async / Await</li><li>Grand Central Dispatch</li></ul></div>
+      <div class="skill"><h3>Data &amp; backend</h3>
+        <ul><li>REST APIs</li><li>Firebase / Firestore</li><li>Core Data</li><li>Realm</li><li>Auth, payments, subscriptions</li></ul></div>
+      <div class="skill"><h3>Cross-platform</h3>
+        <ul><li>React Native</li><li>Native modules &amp; bridging</li><li>OpenCV</li></ul></div>
+      <div class="skill"><h3>Delivery</h3>
+        <ul><li>Xcode · App Store Connect</li><li>TestFlight · CI/CD</li><li>XCTest · Instruments</li><li>Code review · Mentoring</li></ul></div>
     </div>
   </div>
 </section>
 
-<!-- EXPERIENCE -->
 <section class="band" id="experience">
   <div class="wrap">
     <p class="eyebrow">Experience</p>
-    <h2 style="margin-bottom:30px">Built for production, not demos.</h2>
+    <h2 style="margin-bottom:30px">Eight years of production iOS work.</h2>
 
     <article class="role">
-      <div class="role__when">[[ START – PRESENT ]]</div>
+      <div class="role__when"><b>Jun 2025 – Present</b>Remote</div>
       <div>
-        <h3>Senior iOS Engineer</h3>
-        <p class="role__org">[[ COMPANY NAME ]] · Remote</p>
+        <h3>Lead iOS Developer</h3>
+        <p class="role__org">Uverse Digital</p>
         <ul>
-          <li>Own the camera and media layer of a production iOS app, covering capture-session lifecycle, spatial photo and video, and multiple capture modes across device generations.</li>
-          <li>Built real-time streaming features on LiveKit and WebRTC, including capture, orientation handling and video-quality tuning.</li>
-          <li>[[ ADD ONE QUANTIFIED OUTCOME — e.g. crash rate, users, launch scope, review-time reduction ]]</li>
-          <li>Review code and mentor engineers on AVFoundation and iOS architecture.</li>
+          <li>Lead a team of 3 iOS engineers building OPIC3D, a spatial camera and live-streaming app, including its custom camera system built from the ground up.</li>
+          <li>Developed standard and spatial photo and video capture with AVFoundation, including stereoscopic capture and spatial metadata for Apple Vision Pro playback.</li>
+          <li>Implemented manual focus, autofocus, custom zoom controls, multiple camera modes and real-time preview.</li>
+          <li>Built spatial video transcoding for synchronised left-eye and right-eye 3D playback and refined session reconfiguration to keep capture transitions responsive.</li>
+          <li>Shipped LiveKit-powered 2D live streaming with real-time audience comments and a custom in-stream keyboard, while contributing to 3D streaming capability.</li>
+          <li>Integrated REST APIs with caching and defensive error handling while keeping camera and streaming state isolated from the interface layer.</li>
         </ul>
       </div>
     </article>
 
     <article class="role">
-      <div class="role__when">[[ START – END ]]</div>
+      <div class="role__when"><b>Oct 2022 – May 2025</b>Lahore, Pakistan</div>
       <div>
-        <h3>iOS Engineer</h3>
-        <p class="role__org">[[ COMPANY NAME ]] · [[ LOCATION / REMOTE ]]</p>
+        <h3>Senior iOS Developer</h3>
+        <p class="role__org">3S Solutions Pvt. Ltd.</p>
         <ul>
-          <li>Delivered native iOS features inside React Native products, writing native modules where platform APIs were required.</li>
-          <li>Integrated third-party SDKs and shipped releases through TestFlight and App Store review.</li>
-          <li>[[ ADD ONE QUANTIFIED OUTCOME ]]</li>
+          <li>Built core features for Sibme, a production video-coaching and education platform, as part of a 4-person iOS team.</li>
+          <li>Delivered file and folder workflows, background audio recording, notifications, onboarding improvements and media playback features.</li>
+          <li>Improved AVFoundation-based playback and recording behavior inside an established production codebase.</li>
+          <li>Implemented AI Tools, Insights, Coach chat and form-based workflows used in coaching experiences.</li>
+          <li>Reviewed code and supported junior developers while delivering production fixes and App Store releases.</li>
+          <li>Built the native iOS module and React Native bridge for Mr. Rebounder's 3D exercise and timer-based workout flows.</li>
         </ul>
       </div>
     </article>
 
     <article class="role">
-      <div class="role__when">[[ START – END ]]</div>
+      <div class="role__when"><b>Sep 2020 – Sep 2022</b>Lahore, Pakistan</div>
       <div>
         <h3>iOS Developer</h3>
-        <p class="role__org">[[ COMPANY NAME ]] · [[ LOCATION / REMOTE ]]</p>
+        <p class="role__org">Tiksom Pvt. Limited</p>
         <ul>
-          <li>[[ RESPONSIBILITY FROM CV ]]</li>
-          <li>[[ RESPONSIBILITY FROM CV ]]</li>
+          <li>Developed production iOS apps across fintech, wellness, productivity and marketplace domains.</li>
+          <li>Architected Stonks Trading with secure authentication, real-time portfolio management, crypto and fiat workflows and banking integration.</li>
+          <li>Sole iOS developer for Weeks: Habit Tracker — built the core UI and data layer independently, with Firestore sync, calendar-based tracking and progress graphs.</li>
+          <li>Integrated Objective-C bridging, OpenCV and AVFoundation for Verideal's high-accuracy V-CODE anti-counterfeiting scanner.</li>
+          <li>Developed audio and video playback with premium content access for Tap for Joy, a meditation and audiobook app.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="role">
+      <div class="role__when"><b>May 2019 – Aug 2020</b>Lahore, Pakistan</div>
+      <div>
+        <h3>iOS Developer</h3>
+        <p class="role__org">FrizHub</p>
+        <ul>
+          <li>Shipped production iOS apps across health-tech, social and legal-tech domains.</li>
+          <li>Integrated Twilio-powered video consultations, doctor–patient chat and real-time communication for Hyphen, a telemedicine app.</li>
+          <li>Built real-time chat and comments with Socket.IO and WebSockets, plus content feeds and pagination for Bublle.</li>
+          <li>Delivered Realm-backed offline features for Patient Declaration to support use in low-connectivity environments.</li>
+          <li>Supported junior developers alongside feature delivery and production fixes.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="role">
+      <div class="role__when"><b>2018 – 2019</b>Lahore, Pakistan</div>
+      <div>
+        <h3>iOS Developer</h3>
+        <p class="role__org">Expert System Solution · mindslab</p>
+        <ul>
+          <li>Shipped the Epose Restaurant iPad app and WTD Wholesale Tire Distributions, including an iPad-optimised management interface and e-commerce features.</li>
         </ul>
       </div>
     </article>
   </div>
 </section>
 
-<!-- WORK -->
 <section class="band" id="work">
   <div class="wrap">
     <p class="eyebrow">Selected work</p>
-    <h2 style="margin-bottom:32px">Four problems worth a closer look.</h2>
+    <h2 style="margin-bottom:32px">Products I've shipped.</h2>
     <div class="grid2">
 
       <article class="proj">
-        <p class="proj__tag">Camera systems</p>
-        <h3>OPIC3D — Spatial Camera</h3>
-        <p>Spatial photo and video capture on iPhone, covering capture-session lifecycle, camera modes, and the media workflow from capture through to playback and sharing.</p>
-        <div class="spec">Swift · AVFoundation<br>MV-HEVC · Spatial video<br>Shipped to App Store</div>
+        <p class="proj__tag">Spatial camera · 2025–present</p>
+        <h3>OPIC3D</h3>
+        <p>Spatial camera and live-streaming app. Custom camera system built from scratch: stereoscopic capture, spatial metadata for Vision Pro playback, transcoding for synchronised 3D playback, and LiveKit streaming with live audience comments.</p>
+        <div class="spec">Swift · AVFoundation · SwiftUI<br>Stereoscopic media · Spatial capture<br>LiveKit · WebRTC</div>
         <a class="proj__link" href="https://apps.apple.com/us/app/opic3d-spatial-videos-reels/id6750488011" target="_blank" rel="noopener">View on the App Store ↗</a>
       </article>
 
       <article class="proj">
-        <p class="proj__tag">Real-time media</p>
-        <h3>Live Streaming Pipeline</h3>
-        <p>Real-time video built on LiveKit and WebRTC alongside AVFoundation capture — covering orientation, audio engine behaviour, frame processing and video quality under variable network conditions.</p>
-        <div class="spec">LiveKit · WebRTC<br>AVFoundation<br>Adaptive quality</div>
-      </article>
-
-      <article class="proj">
-        <p class="proj__tag">Capture pipeline</p>
-        <h3>Advanced Camera Modes</h3>
-        <p>Photo, video, spatial and slow-motion modes in one capture architecture, with device-capability checks and safe session transitions between modes.</p>
-        <div class="spec">AVCaptureSession<br>120 / 240 FPS<br>Device capability gating</div>
-      </article>
-
-      <article class="proj">
-        <p class="proj__tag">Education · Cross-platform</p>
+        <p class="proj__tag">Video coaching SaaS · 2022–2025</p>
         <h3>Sibme</h3>
-        <p>Video coaching platform for educators — recording, uploading and annotating classroom video, with the iOS capture and playback layer built natively.</p>
-        <div class="spec">Swift · React Native<br>Video capture &amp; upload<br>Shipped to App Store</div>
+        <p>Video coaching platform for educators. Built files and folders, background audio, media workflows, onboarding, notifications and AI-assisted coaching experiences.</p>
+        <div class="spec">Swift · UIKit · AVFoundation<br>Background audio · AI workflows<br>Push notifications · REST APIs</div>
         <a class="proj__link" href="https://apps.apple.com/us/app/sibme/id629939151" target="_blank" rel="noopener">View on the App Store ↗</a>
+      </article>
+
+      <article class="proj">
+        <p class="proj__tag">Fitness · React Native + iOS</p>
+        <h3>Mr. Rebounder</h3>
+        <p>Fitness application with guided 3D exercise flows, workout modes and timer-driven sessions. Built native iOS functionality and connected it to React Native through a custom bridge.</p>
+        <div class="spec">React Native · Swift<br>Native modules · Bridging<br>3D exercise flows · Timers</div>
+      </article>
+
+      <article class="proj">
+        <p class="proj__tag">Fintech · 2021–2022</p>
+        <h3>Stonks Trading</h3>
+        <p>End-to-end crypto and fiat trading app with secure authentication, real-time portfolio management, banking integration and transaction workflows.</p>
+        <div class="spec">Swift · REST APIs<br>Auth · Banking integration<br>Real-time portfolio</div>
+      </article>
+
+      <article class="proj">
+        <p class="proj__tag">Telehealth · 2020</p>
+        <h3>Hyphen</h3>
+        <p>Telemedicine platform with Twilio-powered video consultations, doctor–patient chat, OTP authentication and coordinated asynchronous API calls using GCD.</p>
+        <div class="spec">Twilio · Real-time video<br>OTP auth · GCD<br>Push notifications</div>
+      </article>
+
+      <article class="proj">
+        <p class="proj__tag">Luxury lifestyle &amp; concierge</p>
+        <h3>Lujo</h3>
+        <p>Global luxury-booking platform for curated experiences, hotels, flights, yacht charters, dining and VIP events. As Senior iOS Developer, I built major discovery, filtering and booking workflows across multiple product modules.</p>
+        <div class="spec">Swift · UIKit · Storyboards<br>Async/await · GCD · OperationQueue<br>Region → Country → City filtering</div>
+        <a class="proj__link" href="#case-lujo">Read the case study ↓</a>
+        <a class="proj__link" href="https://apps.apple.com/us/app/lujo/id1233843327" target="_blank" rel="noopener">View on the App Store ↗</a>
+      </article>
+
+      <article class="proj">
+        <p class="proj__tag">Computer vision · 2022</p>
+        <h3>Verideal — V-CODE Scanner</h3>
+        <p>High-accuracy anti-counterfeiting scanner combining OpenCV, AVFoundation and Objective-C bridging for camera-based code validation.</p>
+        <div class="spec">OpenCV · AVFoundation<br>Objective-C bridging<br>Camera-based validation</div>
+      </article>
+
+      <article class="proj">
+        <p class="proj__tag">Productivity · 2021</p>
+        <h3>Weeks — Habit Tracker</h3>
+        <p>Sole iOS developer. Built the full UI and data layer: Firestore sync, nested collection views, calendar-based habit tracking, date calculations and visual progress graphs.</p>
+        <div class="spec">Swift · Firebase Firestore<br>Calendar tracking<br>Sole developer</div>
+      </article>
+
+      <article class="proj">
+        <p class="proj__tag">Wellness &amp; media</p>
+        <h3>Tap for Joy</h3>
+        <p>Meditation and audio experience with media playback and premium content access across long-form audio and video journeys.</p>
+        <div class="spec">Swift · UIKit<br>Audio &amp; video playback<br>In-app purchases</div>
+        <a class="proj__link" href="https://apps.apple.com/in/app/tap-for-joy/id1544910871" target="_blank" rel="noopener">View on the App Store ↗</a>
       </article>
 
     </div>
   </div>
 </section>
 
-<!-- CASE STUDIES -->
 <section class="band" id="case-opic">
   <div class="wrap">
     <p class="eyebrow">Case study 01</p>
 
     <article class="case">
       <div class="case__head">
-        <span class="case__kicker">OPIC3D · iOS · Spatial capture</span>
+        <span class="case__kicker">OPIC3D · Uverse Digital · 2025–present</span>
         <a class="proj__link" style="margin-top:0" href="https://apps.apple.com/us/app/opic3d-spatial-videos-reels/id6750488011" target="_blank" rel="noopener">App Store ↗</a>
       </div>
-      <h2>Adding spatial capture without breaking the camera that already shipped.</h2>
+      <h2>Building a spatial camera from scratch, then making it fast enough to ship.</h2>
 
       <div class="split">
         <div class="case__block">
           <h4>Overview</h4>
-          <p>OPIC3D captures spatial photos and video on iPhone and turns them into shareable 3D reels. The camera is not a feature of the product — it <em>is</em> the product, so any regression in capture is a regression in the whole app.</p>
+          <p>OPIC3D captures spatial photos and video on iPhone and turns them into shareable 3D reels, with live streaming built in. The camera isn't a feature of the product — it is the product, so a regression in capture is a regression in the whole app.</p>
         </div>
         <div class="case__block">
           <h4>My role</h4>
-          <p>iOS engineer on the capture layer. Responsible for the capture-session architecture, spatial photo and video capture, camera mode transitions, and keeping existing capture behaviour stable while new modes were added.</p>
+          <p>Lead iOS Developer. I lead a team of three engineers and own the camera system end to end: capture architecture, spatial and stereoscopic capture, camera controls, transcoding, and the LiveKit streaming layer.</p>
         </div>
       </div>
 
       <div class="case__block">
         <h4>The challenge</h4>
-        <p>Spatial capture needed to sit alongside the modes users already relied on, on a device fleet where capability differs by model. A naive implementation reconfigures the session on every mode change — which produces visible preview stalls, dropped frames at the moment of capture, and inconsistent behaviour between devices that support spatial capture and those that don't.</p>
+        <p>Spatial capture on iPhone means recording two synchronised eye streams, attaching the metadata Apple Vision Pro needs for playback, and transcoding the result so left and right eyes stay aligned. Every one of those steps adds processing time, and all of it sits between the user tapping record and the user seeing their result — a gap long enough to become a product problem, not just a technical one.</p>
+        <p>The app also needed several capture modes sharing one camera system — standard photo, standard video, spatial photo, spatial video — plus manual focus, autofocus and custom zoom, without the preview stalling every time a user switched between them.</p>
       </div>
 
       <div class="case__block">
         <h4>Technical approach</h4>
         <ul>
-          <li>Built mode switching around a single long-lived <code>AVCaptureSession</code>, batching input and output changes inside <code>beginConfiguration()</code> / <code>commitConfiguration()</code> so the preview never tears down between modes.</li>
-          <li>Gated spatial capture behind runtime capability checks on <code>AVCaptureDevice</code> formats rather than device-model strings, so the feature degrades cleanly on hardware that can't support it.</li>
-          <li>Handled the MV-HEVC output path for spatial media, including the metadata required for correct playback.</li>
-          <li>Made session interruption and lifecycle handling explicit — backgrounding, incoming calls, and route changes — so returning to the app resumes a valid session rather than a black preview.</li>
+          <li>Built the capture layer on AVFoundation around a single long-lived <code>AVCaptureSession</code>, batching input and output changes so mode switches reconfigure the session rather than tearing it down and rebuilding it.</li>
+          <li>Implemented stereoscopic capture with the spatial metadata required for correct Vision Pro playback, and a transcoding path that keeps left-eye and right-eye tracks synchronised.</li>
+          <li>Refactored capture-session reconfiguration to remove redundant work and keep transitions between camera modes responsive.</li>
+          <li>Built manual focus, autofocus, custom zoom and real-time preview as controls layered on that single session rather than as separate capture paths.</li>
+          <li>Shipped 2D live streaming on LiveKit with real-time audience comments and a custom in-stream keyboard, and contributed to the 3D streaming work.</li>
+          <li>Kept capture logic out of view controllers using MVVM and Clean Architecture, so the camera system can be reasoned about independently of the UI.</li>
         </ul>
       </div>
 
@@ -506,30 +595,35 @@ p{margin:0 0 1.05em}
         <div class="case__block">
           <h4>Key engineering decisions</h4>
           <ul>
-            <li>Capability detection at runtime, not by device list — new hardware works without a code change.</li>
-            <li>One session, reconfigured, rather than a session per mode — avoids teardown latency at the exact moment users expect the camera to be ready.</li>
-            <li>Capture logic kept out of view controllers so it could be reasoned about and tested independently of the UI.</li>
+            <li>One session, reconfigured — not a session per mode. Teardown latency lands at exactly the moment users expect the camera to be ready.</li>
+            <li>Capture logic isolated from the UI layer, so a change to camera controls can't destabilise the capture path.</li>
+            <li>Latency treated as a product requirement rather than a later optimisation, which is why the session refactor happened before launch instead of after.</li>
           </ul>
         </div>
         <div class="case__block">
           <h4>Technologies</h4>
           <div class="chips">
             <span class="chip">Swift</span><span class="chip">AVFoundation</span>
-            <span class="chip">AVCaptureSession</span><span class="chip">MV-HEVC</span>
-            <span class="chip">Spatial video</span><span class="chip">UIKit</span>
+            <span class="chip">AVCaptureSession</span><span class="chip">Spatial video</span>
+            <span class="chip">Stereoscopic capture</span><span class="chip">visionOS playback</span>
+            <span class="chip">LiveKit</span><span class="chip">SwiftUI</span>
+            <span class="chip">UIKit</span><span class="chip">MVVM</span>
           </div>
         </div>
       </div>
 
-      <div class="split">
-        <div class="case__block">
-          <h4>Results</h4>
-          <p>[[ ADD REAL OUTCOME — e.g. shipped to the App Store on [date]; spatial capture available across [N] modes; crash-free sessions at [X]%; capture-related support tickets down [Y]%. Use one number you can defend in an interview. ]]</p>
+      <div class="case__block">
+        <h4>Results</h4>
+        <div class="metrics">
+          <div class="metric"><b>Live</b><span>Production App Store release</span></div>
+          <div class="metric"><b>Multi-mode</b><span>Unified capture architecture</span></div>
+          <div class="metric"><b>3</b><span>iOS engineers led</span></div>
         </div>
-        <div class="case__block">
-          <h4>What I took from it</h4>
-          <p>On camera work, the expensive bugs are almost never in the capture call itself — they're in state transitions. Mode switches, interruptions, and orientation changes are where a capture pipeline actually fails, so that's where the architecture has to be deliberate.</p>
-        </div>
+      </div>
+
+      <div class="case__block">
+        <h4>What I took from it</h4>
+        <p>On camera work the expensive problems are almost never in the capture call itself — they're in state transitions and in everything that happens after the shutter. Mode switches, interruptions and post-capture processing are where a pipeline actually fails users, so that's where the architecture has to be deliberate.</p>
       </div>
     </article>
   </div>
@@ -541,33 +635,37 @@ p{margin:0 0 1.05em}
 
     <article class="case">
       <div class="case__head">
-        <span class="case__kicker">Sibme · iOS · Video capture &amp; upload</span>
+        <span class="case__kicker">Sibme · 3S Solutions · 2022–2025</span>
         <a class="proj__link" style="margin-top:0" href="https://apps.apple.com/us/app/sibme/id629939151" target="_blank" rel="noopener">App Store ↗</a>
       </div>
-      <h2>Reliable classroom video capture on unreliable school networks.</h2>
+      <h2>Making long-form classroom video reliable inside an established codebase.</h2>
 
       <div class="split">
         <div class="case__block">
           <h4>Overview</h4>
-          <p>Sibme is a video coaching platform for educators: teachers record classroom sessions, upload them, and coaches annotate the footage with time-stamped feedback. The recording is often long-form and captured somewhere with poor connectivity.</p>
+          <p>Sibme is a video-coaching platform for educators: teachers record classroom sessions, upload them, and coaches leave time-stamped feedback on the footage. Recordings are long, often captured on school networks, and the app was already in production with an established user base.</p>
         </div>
         <div class="case__block">
           <h4>My role</h4>
-          <p>[[ CONFIRM YOUR SCOPE — e.g. iOS engineer responsible for capture, upload and playback; or feature-level ownership of X. Be specific about what you personally built. ]]</p>
+          <p>Senior iOS Developer in a 4-person iOS team. I delivered features end to end—from architecture and implementation through debugging, review and production support.</p>
         </div>
       </div>
 
       <div class="case__block">
         <h4>The challenge</h4>
-        <p>[[ DESCRIBE THE REAL PROBLEM YOU HIT. A strong version names the failure: e.g. "long recordings were failing to upload over school Wi-Fi, and a failed upload lost the recording entirely." ]]</p>
+        <p>Two problems ran in parallel. The media pipeline caused noticeable buffering on playback, which matters when a coach is scrubbing through an hour of classroom footage to leave feedback at specific timestamps. And audio recording had to survive the app being backgrounded — teachers don't sit watching a screen while they teach.</p>
+        <p>Both had to be solved inside a mature codebase with existing users, where a fix that destabilises playback is worse than the original problem.</p>
       </div>
 
       <div class="case__block">
         <h4>Technical approach</h4>
         <ul>
-          <li>[[ WHAT YOU BUILT — e.g. background upload via URLSession background sessions, chunked/resumable transfer, local persistence of recordings until upload confirmed ]]</li>
-          <li>[[ WHAT ELSE — e.g. playback with time-stamped annotation sync ]]</li>
-          <li>[[ WHAT BROKE AND HOW YOU FIXED IT — this is the most valuable line on the page ]]</li>
+          <li>Improved AVFoundation-based media playback and recording behavior, focusing on reliability for long-form classroom content.</li>
+          <li>Implemented reliable background audio handling so recordings continue correctly when the app isn't in the foreground.</li>
+          <li>Built file and folder management workflows, giving users structure over a growing library of recordings.</li>
+          <li>Implemented AI Tools, Insights, Coach chat and form-based workflows for coaching use cases.</li>
+          <li>Delivered notifications, onboarding improvements and production fixes without disrupting existing user workflows.</li>
+          <li>Reviewed code and supported junior developers to reduce regression risk.</li>
         </ul>
       </div>
 
@@ -575,35 +673,115 @@ p{margin:0 0 1.05em}
         <div class="case__block">
           <h4>Key engineering decisions</h4>
           <ul>
-            <li>[[ A TRADE-OFF YOU MADE AND WHY ]]</li>
-            <li>[[ AN ALTERNATIVE YOU REJECTED AND WHY ]]</li>
+            <li>Fixed the media pipeline rather than adding buffering workarounds at the UI layer — the symptom was playback, but the cause was upstream.</li>
+            <li>Kept recording lifecycle behavior explicit so background transitions did not silently break long-running sessions.</li>
+            <li>Paired significant changes with careful review because, in an established codebase, the risk is often what a feature affects outside its own screen.</li>
           </ul>
         </div>
         <div class="case__block">
           <h4>Technologies</h4>
           <div class="chips">
             <span class="chip">Swift</span><span class="chip">AVFoundation</span>
-            <span class="chip">React Native</span><span class="chip">URLSession</span>
-            <span class="chip">[[ ADD / REMOVE ]]</span>
+            <span class="chip">Background audio</span><span class="chip">UIKit</span>
+            <span class="chip">REST APIs</span><span class="chip">AI workflows</span>
+            <span class="chip">Push notifications</span><span class="chip">MVVM</span>
           </div>
         </div>
       </div>
 
-      <div class="split">
-        <div class="case__block">
-          <h4>Results</h4>
-          <p>[[ ADD REAL OUTCOME ]]</p>
+      <div class="case__block">
+        <h4>Results</h4>
+        <div class="metrics">
+          <div class="metric"><b>Reliable</b><span>Long-form media workflows</span></div>
+          <div class="metric"><b>Expanded</b><span>AI-assisted coaching tools</span></div>
+          <div class="metric"><b>4-person</b><span>iOS product team</span></div>
         </div>
-        <div class="case__block">
-          <h4>What I took from it</h4>
-          <p>[[ ONE HONEST LESSON ]]</p>
-        </div>
+      </div>
+
+      <div class="case__block">
+        <h4>What I took from it</h4>
+        <p>In a mature product, reliability improvements and new features cannot be treated as separate tracks. The best change solves the immediate user problem while leaving the surrounding code easier—not riskier—to evolve.</p>
       </div>
     </article>
   </div>
 </section>
 
-<!-- WHY -->
+<section class="band band--plain" id="case-lujo" style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow">Case study 03</p>
+
+    <article class="case">
+      <div class="case__head">
+        <span class="case__kicker">LUJO · Luxury lifestyle platform · UAE</span>
+        <a class="proj__link" style="margin-top:0" href="https://apps.apple.com/us/app/lujo/id1233843327" target="_blank" rel="noopener">App Store ↗</a>
+      </div>
+      <h2>Making location-dependent luxury discovery work across multiple booking products.</h2>
+
+      <div class="split">
+        <div class="case__block">
+          <h4>Overview</h4>
+          <p>LUJO is a luxury lifestyle management and digital concierge platform. It gives users access to curated experiences, hotels, villas, dining, private and commercial flights, yacht charters, VIP event tickets and personalized concierge requests.</p>
+        </div>
+        <div class="case__block">
+          <h4>My role</h4>
+          <p>Senior iOS Developer. I worked on the Events, Experiences, Yachts and Hotels modules, with responsibility for complex filters, booking flows and the asynchronous APIs that powered location-based discovery.</p>
+        </div>
+      </div>
+
+      <div class="case__block">
+        <h4>The challenge</h4>
+        <p>The “Products by Region” flow used three dependent location levels: Region → Country → City. A selection at one level determined the available values and API requests for the next. That dependency had to behave consistently across four different product modules, each with its own catalogue, filters and booking journey.</p>
+        <p>The difficult part was not rendering three selectors. It was coordinating dependent network requests, keeping selection state consistent, and preventing older responses from producing incorrect filters as users moved quickly between regions, countries and cities.</p>
+      </div>
+
+      <div class="case__block">
+        <h4>Technical approach</h4>
+        <ul>
+          <li>Implemented the three-level regional discovery flow across Events, Experiences, Yachts and Hotels.</li>
+          <li>Coordinated dependent API operations using async/await, Grand Central Dispatch and OperationQueue according to the requirements of each workflow.</li>
+          <li>Managed selection, loading and response state so downstream Country and City data remained aligned with the user's current Region selection.</li>
+          <li>Integrated complex filters with module-specific product catalogues and booking paths.</li>
+          <li>Built and maintained interfaces using UIKit, Storyboards and Auto Layout, keeping the experience consistent across device sizes.</li>
+        </ul>
+      </div>
+
+      <div class="split">
+        <div class="case__block">
+          <h4>Key engineering decisions</h4>
+          <ul>
+            <li>Treated Region, Country and City as an explicit dependency chain rather than three independent filters.</li>
+            <li>Sequenced dependent operations so each request received the state produced by the level above it.</li>
+            <li>Applied the same state principles across multiple modules while preserving their individual product and booking requirements.</li>
+          </ul>
+        </div>
+        <div class="case__block">
+          <h4>Technologies</h4>
+          <div class="chips">
+            <span class="chip">Swift</span><span class="chip">UIKit</span>
+            <span class="chip">Storyboards</span><span class="chip">Auto Layout</span>
+            <span class="chip">Async/await</span><span class="chip">GCD</span>
+            <span class="chip">OperationQueue</span><span class="chip">REST APIs</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="case__block">
+        <h4>Results</h4>
+        <div class="metrics">
+          <div class="metric"><b>4</b><span>Major booking modules</span></div>
+          <div class="metric"><b>3-level</b><span>Dependent location filtering</span></div>
+          <div class="metric"><b>Live</b><span>Production App Store product</span></div>
+        </div>
+      </div>
+
+      <div class="case__block">
+        <h4>What I took from it</h4>
+        <p>Dependent filters are state-management problems before they are UI problems. Making the hierarchy explicit—and controlling when each network operation can begin—keeps complex discovery experiences predictable as the product grows.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
 <section class="band" id="why">
   <div class="wrap">
     <p class="eyebrow">Working together</p>
@@ -611,42 +789,47 @@ p{margin:0 0 1.05em}
     <div class="why">
       <div class="why__item">
         <h3>Depth where it's scarce</h3>
-        <p>Camera pipelines, spatial media and real-time video are narrow specialisms. If that's where your product's difficulty lives, you're hiring someone who has already made these mistakes on a shipping app.</p>
-      </div>
-      <div class="why__item">
-        <h3>I ship through review</h3>
-        <p>Apple rejects for things Google never checks — privacy labels, account deletion, guideline 4.2. I handle submission end-to-end rather than handing you a build and disappearing.</p>
+        <p>Camera pipelines, spatial media and real-time video are narrow specialisms. If that's where your product's difficulty lives, you're hiring someone who has already made these mistakes on shipping apps.</p>
       </div>
       <div class="why__item">
         <h3>Care for the existing product</h3>
-        <p>Most of my work has been adding capability to apps that already have users. I plan for the regression risk before writing the feature, not after the crash reports arrive.</p>
+        <p>Most of my work has been adding capability to apps that already had users. I plan for regression risk before writing the feature, not after the crash reports arrive.</p>
       </div>
       <div class="why__item">
-        <h3>Written, not just verbal</h3>
-        <p>Async by default. You get scope in writing, trade-offs explained in plain language, and progress you can read without booking a call across time zones.</p>
+        <h3>I ship through review</h3>
+        <p>Eight years of production iOS delivery. I stay with the work through testing, TestFlight, App Store submission and the fixes that real devices reveal.</p>
+      </div>
+      <div class="why__item">
+        <h3>Comfortable leading</h3>
+        <p>I currently lead three engineers and have mentored juniors at two previous companies. I can own a codebase, review other people's work, and explain a trade-off to a founder in plain language.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section class="band band--plain" id="contact">
   <div class="wrap">
     <div class="contact">
-      <p class="eyebrow" style="color:var(--accent)">Contact</p>
-      <h2>Building something difficult on iOS?</h2>
-      <p class="lede" style="margin-top:16px">I'm open to senior remote roles and contract work — particularly anything involving camera capture, live video or spatial media. Send me the problem and I'll tell you honestly whether I'm the right person for it.</p>
-      <div class="btn-row">
-        <a class="btn" href="mailto:bazil@bazilhassan.com">bazil@bazilhassan.com</a>
-        <a class="btn btn--ghost" href="https://www.linkedin.com/in/bazil-hassan/" target="_blank" rel="noopener">LinkedIn ↗</a>
-        <a class="btn btn--ghost" href="https://github.com/bazilhassan" target="_blank" rel="noopener">GitHub ↗</a>
-        <a class="btn btn--ghost" href="/resume.pdf">Résumé (PDF)</a>
+      <div class="contact__grid">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Need senior ownership on an iOS product?</h2>
+          <p class="lede" style="margin-top:16px">I'm open to senior remote roles and contract work across iOS products, with particular depth in camera capture, spatial media and live video. Send me the product and the problem; I'll tell you honestly where I can help.</p>
+        </div>
+        <div class="contact__actions" aria-label="Contact links">
+          <a class="btn" href="mailto:bazil@bazilhassan.com">bazil@bazilhassan.com</a>
+          <div class="contact__links">
+            <a class="btn btn--ghost" href="https://www.linkedin.com/in/bazil-hassan/" target="_blank" rel="noopener">LinkedIn ↗</a>
+            <a class="btn btn--ghost" href="https://github.com/bazilhassan" target="_blank" rel="noopener">GitHub ↗</a>
+            <a class="btn btn--ghost" href="resume.pdf">Résumé ↗</a>
+          </div>
+        </div>
       </div>
       <div class="contact__meta">
-        <span>Available now</span>
+        <span>Open to work</span>
         <span>Remote · Worldwide</span>
         <span>Contract or full-time</span>
-        <span>Replies within 24h</span>
+        <span>Lahore · PKT (UTC+5)</span>
       </div>
     </div>
 
@@ -661,14 +844,31 @@ p{margin:0 0 1.05em}
 
 <script>
 document.getElementById('yr').textContent = new Date().getFullYear();
-
-// Scroll reveal
 (function(){
-  var targets = document.querySelectorAll('.band > .wrap > *, .hero .wrap > *');
-  if(!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-    return;
+  var toggle = document.getElementById('theme-toggle');
+  function syncLabel(){
+    var dark = document.documentElement.dataset.theme === 'dark';
+    toggle.textContent = dark ? 'Light' : 'Dark';
+    toggle.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
   }
-  targets.forEach(function(el,i){ el.classList.add('rise'); });
+  syncLabel();
+  toggle.addEventListener('click', function(){
+    var next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = next;
+    try{ localStorage.setItem('portfolio-theme', next); }catch(error){}
+    syncLabel();
+  });
+  document.querySelectorAll('.mobile-menu__panel a').forEach(function(link){
+    link.addEventListener('click', function(){
+      var menu = document.querySelector('.mobile-menu');
+      if(menu) menu.removeAttribute('open');
+    });
+  });
+})();
+(function(){
+  if(!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var targets = document.querySelectorAll('.band > .wrap > *, .hero .wrap > *');
+  targets.forEach(function(el){ el.classList.add('rise'); });
   var io = new IntersectionObserver(function(entries){
     entries.forEach(function(e){
       if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
